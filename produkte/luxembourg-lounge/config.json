@@ -1,0 +1,52 @@
+{
+  "productName": "LUXEMBOURG-Lounge",
+  "tagline": "Wo französischer Charme auf pure Entspannung trifft",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "Kaktus", "color": "farben/kaktus.jpg"},
+      {"name": "Baumwollweiß", "color": "farben/baumwollweiss-2.jpg"},
+      {"name": "Lehmgrau", "color": "farben/lehmgrau.jpg"},
+      {"name": "Lapilligrau", "color": "farben/lapilligrau.jpg"},
+      {"name": "Gewittergrau", "color": "farben/gewittergrau.jpg"},
+      {"name": "Anthrazit", "color": "farben/anthrazit.jpg"},
+      {"name": "Lakritze", "color": "farben/lakritze.jpg"},
+      {"name": "Rosmarin", "color": "farben/rosmarin.jpg"},
+      {"name": "Lindgrün", "color": "farben/lindgruen.jpg"},
+      {"name": "Pesto", "color": "farben/pesto.jpg"},
+      {"name": "Zederngrün", "color": "farben/zederngruen.jpg"},
+      {"name": "Abyssblau", "color": "farben/abyssblau.jpg"},
+      {"name": "Acapulcoblau", "color": "farben/acapulcoblau.jpg"},
+      {"name": "Maya-Blau", "color": "farben/maya-blau.jpg"},
+      {"name": "Marshmallow", "color": "farben/marshmallow.jpg"},
+      {"name": "Gletscherminze", "color": "farben/gletscherminze.jpg"},
+      {"name": "Zitronensorbet", "color": "farben/zitronensorbet.jpg"},
+      {"name": "Lebkuchen", "color": "farben/lebkuchen.jpg"},
+      {"name": "Tonka", "color": "farben/tonka.jpg"},
+      {"name": "Schwarzkirsche", "color": "farben/schwarzkirsche.jpg"},
+      {"name": "Chili", "color": "farben/chili.jpg"},
+      {"name": "Ockerrot", "color": "farben/ockerrot.jpg"},
+      {"name": "Kandierte Orange", "color": "farben/kandierte-orange.jpg"},
+      {"name": "Honig", "color": "farben/honig.jpg"},
+      {"name": "Muskat", "color": "farben/muskat.jpg"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "LUXEMBOURG-Lounge 1-Sitzer, tiefer Sessel, mit Armlehnen", "svg": "piktogramme/luxembourg-lounge-1-sitzer-tiefer-sessel-mit-armlehnen.svg", "modelFile": "modelle/luxembourg-lounge-1-sitzer-tiefer-sessel-mit-armlehnen.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.01, 0.00], "viewAngle": 29, "zoom": 2.5}},
+    {"name": "LUXEMBOURG-Lounge 1-Sitzer, ohne Armlehnen", "svg": "piktogramme/luxembourg-lounge-1-sitzer-ohne-armlehnen.svg", "modelFile": "modelle/luxembourg-lounge-1-sitzer-ohne-armlehnen.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.01, 0.00], "viewAngle": 29, "zoom": 2.65}},
+    {"name": "LUXEMBOURG-Lounge 1-Sitzer, mit Armlehnen", "svg": "piktogramme/luxembourg-lounge-1-sitzer-mit-armlehnen.svg", "modelFile": "modelle/luxembourg-lounge-1-sitzer-mit-armlehnen.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 2.65}},
+    {"name": "LUXEMBOURG-Lounge 2-Sitzer, tiefer Sessel, mit Armlehnen", "svg": "piktogramme/luxembourg-lounge-2-sitzer-tiefer-sessel-mit-armlehnen.svg", "modelFile": "modelle/luxembourg-lounge-2-sitzer-tiefer-sessel-mit-armlehnen.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 2.2}}
+  ],
+  "measurements": {
+  "type": "images",
+  "images": [
+    "bilder/luxemburg-sessel-bemassung-1.png",
+    "bilder/luxemburg-sessel-bemassung-3.png",
+    "bilder/luxemburg-sessel-bemassung-4.png",
+    "bilder/luxemburg-sessel-bemassung-5.png"
+  ]
+},
+
+  "has3D": true,
+  "environmentHdr": "/materialien/environment.hdr"
+}

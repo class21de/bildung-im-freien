@@ -1,0 +1,568 @@
+/* /css/menu.css */
+.main-header {
+    background-color: rgba(245, 240, 232, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    margin-top: 29px;
+}
+
+.main-nav .nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 35px;
+}
+
+.nav-list{
+  font-size: 24px;
+}
+
+.nav-link {
+    text-decoration: none; color: var(--color-text); font-weight: 500;
+    padding: 8px 0; position: relative; transition: color 0.3s;
+}
+
+.nav-link:hover { color: var(--color-primary); }
+
+.nav-link::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0%; height: 1px; background-color: var(--color-primary);
+    transition: width 0.4s ease;
+}
+
+.nav-link:hover::after { width: 100%; }
+
+.nav-item--button { margin-left: 25px; }
+
+/* Desktop Mega-Menu */
+/* /css/menu.css - Updated Desktop Mega-Menu */
+.nav-item--has-dropdown { position: relative; }
+
+/* Main Dropdown Container */
+.dropdown {
+    position: fixed;
+    /* Leave the same visual breathing room below the header as the design. */
+    top: 178px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    /* max-width: calc(100vw - 40px); */
+    max-width:2000px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(10px);
+    background: var(--color-white);
+    box-shadow: var(--shadow-strong);
+    border-radius: 12px;
+    padding: 0; /* Remove padding from main container, applied inside */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    /* CHANGE: Switch from Grid to Flex to allow Sidebar + Content layout */
+    display: flex;
+    overflow: hidden; /* Ensures sidebar rounding matches container */
+    z-index: 999;
+}
+
+/* .nav-item--has-dropdown:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); } */
+.nav-item--has-dropdown .dropdown.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+/* New: Sidebar for Categories */
+.dropdown-sidebar {
+    width: 405px;
+    background-color: #f8f6f2;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.dropdown-category-link {
+    display: block;
+    /* Added 50px right padding to ensure text never overlaps the arrow */
+    padding: 15px 50px 15px 20px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+
+    /* Matches "Produkte" size and weight */
+    font-size: 24px;
+    font-weight: 500;
+
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+    line-height: 1.3; /* Good line height for wrapping text */
+}
+
+.dropdown-category-link:hover,
+.dropdown-category-link.is-active {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-subtle);
+}
+
+.dropdown-category-link.is-active::after {
+    content: "\f054"; /* FontAwesome Chevron Right */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 20px; /* Positioned clearly within the right padding area */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em; /* Relative to the new font size */
+}
+
+/* New: Content Area for Products */
+.dropdown-content-area {
+    flex-grow: 1;
+    /* The indoor overview needs a little more room at the bottom than the
+       product grids, matching the reference panel's white margin. */
+    padding: 30px 22px 58px 36px;
+    background-color: var(--color-white);
+    max-height: 90vh; /* Prevent it from being too tall */
+    overflow-y: auto;
+}
+
+/* The Grid inside the content area */
+.dropdown-product-grid {
+    display: none; /* Hidden by default */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    animation: fadeIn 0.4s ease;
+}
+
+.dropdown-product-grid.is-visible {
+    display: grid;
+}
+
+/* Indoor overview in the Produkte mega-menu */
+.dropdown-indoor-panel.is-visible {
+    /* Each column is proportional to its photo's actual aspect ratio. With
+       auto rows, the images determine their own size: no clipping and no
+       empty letterboxing around the image. */
+    grid-template-columns: minmax(0, 1.319fr) minmax(0, 1.139fr) minmax(0, 1.642fr);
+    grid-template-rows: auto auto;
+    gap: 25px 27px;
+    min-height: 0;
+    /* Cancel the site's generic section padding: the grid itself defines the
+       exact white space inside this menu panel. */
+    padding: 0;
+    padding-right: 10px;
+}
+
+.dropdown-indoor-copy {
+    grid-column: span 2;
+    align-self: start;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    /* The navigation intentionally uses nowrap, but that inheritance must
+       stop here so text wraps before the 27px gap beside the hero photo. */
+    white-space: normal;
+    padding: 4px 0;
+    font-size: 21px;
+    line-height: 1.08;
+}
+
+.dropdown-indoor-copy p {
+    margin: 0 0 20px;
+    overflow-wrap: break-word;
+}
+
+.dropdown-indoor-copy a {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    color: var(--color-white);
+    background: var(--color-primary);
+    font-size: 0.92em;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.dropdown-indoor-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.72);
+    border-radius: 14px;
+    /* The border and radius belong to the image—not a fixed-size wrapper. */
+    box-sizing: border-box;
+    align-self: start;
+}
+
+.indoor-image-1 { grid-column: 3; grid-row: 1; }
+.indoor-image-2 { grid-column: 1; grid-row: 2; }
+.indoor-image-3 { grid-column: 2; grid-row: 2; }
+.indoor-image-4 { grid-column: 3; grid-row: 2; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Existing Product Card Styles (Unchanged) */
+.dropdown-link-item {
+    display: flex; flex-direction: column; justify-content: space-between; text-align: center; border: 1px solid #eee;
+    padding: 0; border-radius: 8px; background-color: var(--color-white); overflow: hidden; height: 170px; box-shadow: var(--shadow-subtle);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dropdown-link-item img { width: 100%; height: 100px; object-fit: contain; padding: 5px; }
+.dropdown-link-item p {
+    margin: 0; color: var(--color-product); text-decoration: none; padding: 8px 5px;
+    min-height: 40px; display: flex; align-items: center; justify-content: center; flex-grow: 1;
+    font-size: 14px;
+    font-weight: normal;
+    text-shadow: 0.3px 0.3px 0 #1e2e65;
+}
+.dropdown-link { text-decoration: none; display: block; }
+.dropdown-link:hover .dropdown-link-item p {
+  color: var(--color-primary);
+  text-shadow: 0.3px 0.3px 0 #D97746;
+}
+.dropdown-link-item p span { position: relative; padding-bottom: 5px; }
+.dropdown-link-item p span::after {
+    content: ''; position: absolute; bottom: 0; left: 50%;
+    transform: translateX(-50%); width: 0; height: 1px;
+    background-color: var(--color-primary); transition: width 0.4s ease;
+
+}
+.dropdown-link:hover .dropdown-link-item p span::after { width: var(--underline-width); }
+.dropdown-link:hover .dropdown-link-item { transform: translateY(-5px) scale(1.03); box-shadow: var(--shadow-strong); }
+
+@media (max-width: 1600px) and (min-width: 1241px) {
+    .dropdown {
+        top: 150px;
+    }
+
+    .dropdown-sidebar {
+        width: 340px;
+    }
+
+    .dropdown-content-area {
+        padding: 25px 30px 42px;
+    }
+
+    .dropdown-indoor-panel.is-visible {
+        grid-template-columns: minmax(0, 1.319fr) minmax(0, 1.139fr) minmax(0, 1.642fr);
+        grid-template-rows: auto auto;
+        gap: 18px;
+        min-height: 0;
+    }
+    .dropdown-indoor-copy { font-size: 18px; }
+    .dropdown-indoor-copy p { margin-bottom: 14px; }
+}
+
+/* Hamburger and Mobile Nav */
+.hamburger { display: none; }
+.mobile-submenu-list { display: none; }
+
+
+/* Avi Start */
+/* --- 1. Fix Layout Issues --- */
+
+/* Force main menu items (like Impressum) to stay on ONE line */
+.main-nav .nav-item {
+    white-space: nowrap;
+}
+
+/* Force Sidebar items (like Schulkinder) to wrap into TWO lines */
+.dropdown-category-link {
+    white-space: normal !important;
+}
+
+/* --- 2. New PDF Dropdown Design --- */
+
+.nav-item--has-pdf-dropdown {
+    position: relative;
+    /* Ensure z-index is high so the dropdown floats over everything */
+    z-index: 2000;
+}
+
+/* The Orange Container */
+.pdf-dropdown-menu {
+    display: none;             /* Hidden by default */
+    position: absolute;
+    top: 100%;                 /* Position below button */
+    right: 0;                  /* Align to right edge */
+    background-color: var(--color-primary, #D97746); /* Orange Background */
+    padding: 10px;
+    border-radius: 8px;        /* Rounded corners */
+    min-width: 240px;          /* Specific width */
+    list-style: none;
+    margin-top: 15px;          /* Gap between button and box */
+
+    /* Box Shadow for depth */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Invisible bridge so the menu doesn't disappear when moving mouse across the gap */
+.pdf-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+/* Triangle/Arrow pointing up (Optional - adds a nice touch) */
+.pdf-dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--color-primary, #D97746);
+}
+
+/* Show on Hover */
+.nav-item--has-pdf-dropdown:hover .pdf-dropdown-menu {
+    display: block;
+}
+
+/* List Items */
+.pdf-dropdown-menu li {
+    margin-bottom: 6px;
+    text-align: left; /* Aligns content to the right */
+}
+.pdf-dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+/* Links Text Styling */
+.pdf-dropdown-menu a {
+    color: #fff;              /* White Text */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Pushes content to the right */
+    gap: 10px;                 /* Space between icon and text */
+    transition: opacity 0.3s;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pdf-dropdown-menu a:hover {
+    opacity: 0.8; /* Slight fade on hover */
+    background-color: white;
+    color: var(--color-text);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Icon Styling */
+.pdf-dropdown-menu a i {
+    font-size: 14px;
+}
+
+/* --- Mobile Handling --- */
+@media (max-width: 1240px) {
+    .nav-item--has-pdf-dropdown:hover .pdf-dropdown-menu {
+        display: block; /* Hide hover on mobile */
+    }
+    .pdf-dropdown-menu{
+      display: block;
+      right: inherit;
+      /* background-color: #fbeee0; */
+    }
+    .pdf-dropdown-menu a{
+      justify-content:flex-start;
+      /* color: black; */
+    }
+    .pdf-dropdown-menu::after {
+        left: 20px;
+      /* border-bottom: 20px solid #fbeee0; */
+    }
+}
+
+/* Avi End */
+
+@media (max-width: 1240px) {
+
+  .mobile-submenu-list {
+    display: block;
+  }
+
+.mobile-submenu-category{
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.mobile-submenu-list li {
+  list-style-type: none;
+  margin-top: 5px;
+}
+
+.main-nav .nav-list {
+    align-items: flex-start;
+    margin-left: 50px;
+}
+
+
+  .button-74 {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-74:hover {
+    background-color: #fff;
+  }
+
+  .button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+  @media (min-width: 768px) {
+    .button-74 {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }
+
+    .hamburger {
+        display: block; cursor: pointer; font-size: 1.8rem;
+        color: var(--color-text); z-index: 1003; position: relative;
+    }
+    .main-nav.is-active ~ .hamburger {
+        position: fixed; top: 28px; right: 20px; font-size: 2.2rem;
+    }
+    .main-nav {
+        position: fixed; top: 0; right: 0; width: 100%; height: 100vh;
+        background: var(--color-background); flex-direction: column;
+        justify-content: center; align-items: center;
+        opacity: 0; visibility: hidden;
+        transform: translateX(100%);
+        transition: opacity 0.4s ease, visibility 0.4s, transform 0.4s ease;
+    }
+    .main-nav.is-active { opacity: 1; visibility: visible; transform: translateX(0); }
+    .nav-list { flex-direction: column; align-items: center; width: 100%; margin-top:-100px;}
+    .nav-item { margin: 10px 0; font-size: 1.2rem; }
+    .nav-item--has-dropdown { order: 1; }
+    .nav-item--contact { order: 2; }
+    .nav-item--imprint { order: 3; }
+    .nav-item--button { order: 4; }
+    .nav-item--has-dropdown .dropdown { display: none; }
+    .nav-item--has-dropdown .mobile-submenu-list { display: block; }
+
+
+    .mobile-product-submenu {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+        background-color: var(--color-background); z-index: 1002;
+        opacity: 0; visibility: hidden;
+        transform: translateX(100%);
+        transition: opacity 0.4s ease, visibility 0.4s, transform 0.4s ease;
+    }
+    .mobile-product-submenu.is-active { opacity: 1; visibility: visible; transform: translateX(0); }
+    .mobile-product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 80px 15px 30px 15px; height: 100%; overflow-y: auto;
+    }
+
+    /* The Indoor view is editorial content rather than a product-card grid. */
+    .mobile-product-grid.mobile-indoor-panel {
+        display: block;
+        padding: 82px 20px 32px;
+    }
+
+    .mobile-indoor-copy {
+        color: var(--color-text);
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    .mobile-indoor-copy p {
+        margin: 0 0 18px;
+    }
+
+    .mobile-indoor-copy a {
+        color: var(--color-white);
+        background: var(--color-primary);
+        border-radius: 5px;
+        display: inline-block;
+        padding: 3px 7px;
+        overflow-wrap: anywhere;
+    }
+
+    .mobile-indoor-gallery {
+        display: grid;
+        gap: 16px;
+        margin-top: 28px;
+    }
+
+    .mobile-indoor-gallery img {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid rgba(0, 0, 0, 0.72);
+        border-radius: 12px;
+        object-fit: contain;
+        background: var(--color-white);
+    }
+    .mobile-product-item { text-decoration: none; color: var(--color-text); text-align: center; }
+    .mobile-product-item img {
+        width: 100%; height: auto; object-fit: contain; display: block;
+        margin-bottom: 15px; border: 2px solid #383E42;
+        border-radius: var(--border-radius); background-color: var(--color-white);
+    }
+    .mobile-product-item p { font-family: var(--font-product); font-weight: bold; font-size: 1.1rem; }
+    .submenu-close-btn {
+        position: fixed; top: 28px; right: 20px; z-index: 1003;
+        font-size: 2.2rem; color: var(--color-text); cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-product-grid {
+        grid-template-columns: 1fr;
+    }
+}

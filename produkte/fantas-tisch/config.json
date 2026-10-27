@@ -1,0 +1,68 @@
+{
+  "productName": "FANTAS-TISCH",
+  "tagline": "Die organische Sitzlandschaft für kreativen Austausch",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "RAL 7016 Anthrazitgrau", "color": "#383e42", "material": "RAL 7016"},
+      {"name": "RAL 6017 Maigrün", "color": "#587f40", "material": "RAL 6017"},
+      {"name": "RAL 2000 Gelborange", "color": "#DB6E00", "material": "RAL 2000"},
+      {"name": "RAL 1003 Signalgelb", "color": "#f9a800", "material": "RAL 1003"},
+      {"name": "RAL 5018 Türkisblau", "color": "#058b8c", "material": "RAL 5018"},
+      {"name": "RAL 5019 Capriblau", "color": "#005e83", "material": "RAL 5019"},
+      {"name": "RAL 7035 Lichtgrau", "color": "#C5C7C4", "material": "RAL 7035"},
+      {"name": "RAL 7001 Silbergrau", "color": "#8B959A", "material": "RAL 7001"},
+      {"name": "Feuerverzinkt", "color": "#cccccc", "material": "Feuerverzinkt"}
+    ],
+    "seat": [
+      {"name": "Orange", "color": "#f07b2c", "material": "Orange"},
+      {"name": "Dottergelb", "color": "#fdba13", "material": "Dottergelb"},
+      {"name": "Granny Smith", "color": "#89a348", "material": "Granny Smith"},
+      {"name": "Lichtgrau", "color": "#c0c2bd", "material": "Lichtgrau"}
+    ],
+    "tabletop": [
+      {"name": "Dottergelb", "color": "#fdba13", "material": "Dottergelb"},
+      {"name": "Orange", "color": "#f07b2c", "material": "Orange"},
+      {"name": "Granny Smith", "color": "#89a348", "material": "Granny Smith"},
+      {"name": "Lichtgrau", "color": "#c0c2bd", "material": "Lichtgrau"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "FANTAS-TISCH bogenförmig", "svg": "piktogramme/fantas-tisch-bogenfoermig.svg", "modelFile": "modelle/fantas-tisch-bogenfoermig.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, 0.0, 0.00], "viewAngle": 29, "zoom": 1.95}},
+    {"name": "FANTAS-TISCH gerade", "svg": "piktogramme/fantas-tisch-gerade.svg", "modelFile": "modelle/fantas-tisch-gerade.glb", "settings": {"camPos": [0.01, 1.20, 2.68], "target": [0.00, 0.00, 0.00], "viewAngle": 25, "zoom": 1.9}}
+  ],
+  "measurements": {
+    "type": "table",
+    "sketch":true,
+    "variants": [
+      {"name": "FANTAS-TISCH bogenförmig", "sketch": "piktogramme/fantas-tisch-bogenfoermig.svg", "measurements": {"Tisch": {"L/Ø": "130/78", "B": "78", "H": "74", "SH": "-"}, "Sitzfläche": {"L/Ø": "45", "B": "33", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "161", "B": "130", "H": "-", "SH": "-"}}, "weight": "ca. 45 kg"},
+      {"name": "FANTAS-TISCH gerade", "sketch": "piktogramme/fantas-tisch-gerade.svg", "measurements": {"Tisch": {"L/Ø": "130", "B": "84", "H": "74", "SH": "-"}, "Sitzfläche": {"L/Ø": "45", "B": "33", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "164", "B": "130", "H": "-", "SH": "-"}}, "weight": "ca. 60 kg"}
+
+    ]
+  },
+  "stretchable":{
+    "exists":true,
+    "accessories":true,
+    "configurations":true,
+    "measurements":true
+  },
+
+  "configurations": [
+    { "name": "Hufeisen", "size": "492 x 698 cm", "svg": "piktogramme/fantastisch-konfiguration-1.svg" },
+    { "name": "Zwei Halbe", "size": "508 x 501 cm", "svg": "piktogramme/fantastisch-konfiguration-2.svg" },
+    { "name": "Vogel", "size": "829 x 495 cm", "svg": "piktogramme/fantastisch-konfiguration-3.svg" },
+    { "name": "Bogen", "size": "492 x 471 cm", "svg": "piktogramme/fantastisch-konfiguration-4.svg" },
+    { "name": "Welle", "size": "825 x 417 cm", "svg": "piktogramme/fantastisch-konfiguration-5.svg" },
+    { "name": "Schlange", "size": "900 x 392 cm", "svg": "piktogramme/fantastisch-konfiguration-6.svg" },
+    { "name": "Fragezeichen", "size": "942 x 276 cm", "svg": "piktogramme/fantastisch-konfiguration-7.svg" },
+    { "name": "Kreis", "size": "584 x 215 cm", "svg": "piktogramme/fantastisch-konfiguration-8.svg" },
+    { "name": "S", "size": "376 x 197 cm", "svg": "piktogramme/fantastisch-konfiguration-9.svg" }
+  ],
+  "accessories": [
+    {"name": "Pflege der HPL-Vollkernplatten", "image": "/produkte/zubehoer/hpl-care.jpg", "description": "Unsere Pflegeprodukte für HPL-Oberflächen bestehen aus einem speziellen Reiniger, sowie einem HPL-Pflegemittel inkl. Pflgetücher. Bei regelmäßiger Anwendung und Versiegelung erhalten diese Flächen einen guten Schutz gegen UV-Strahlung und Witterungseinflüssen. Wir empfehlen verteilt aufs Jahr drei Anwendungen, wenn Sie in der kalten Jahreszeit unseren Schutzbezug verwenden reichen zwei."},
+    {"name": "Spiral-Bodenanker", "image": "/produkte/zubehoer/spiralbodenanker.jpg", "description": "Unsere Spiral-Bodenanker dienen als Sicherung der Möbel vor einem Verrücken und der Entfernung aus dem Gelände. Sie lassen sich leicht und präzise in den Untergrund einbringen und mit unseren Möbeln verbinden. Ankerlänge: 30 cm, Befestigung mit metrischer Schraube M 8."}
+  ],
+  "has3D": true,
+  "galvanizedTexture": "/materialien/feuerverzinkt.jpg",
+  "environmentHdr": "/materialien/environment.hdr"
+}

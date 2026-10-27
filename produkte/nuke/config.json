@@ -1,0 +1,43 @@
+{
+  "productName": "NUKE",
+  "tagline": "Der vielseitige Outdoorstuhl mit Charakter",
+
+  "measurements": {
+  "type": "images",
+  "images": [
+    "piktogramme/nuke-bemassung.svg",
+    "piktogramme/nuke-mit-armlehnen-bemassung.svg"
+  ]
+},
+
+  "colorInfo": [
+    {
+      "title": "Farben",
+      "colors": [
+        { "name": "Schneeweiß", "hex": "#F6F5F1" },
+        { "name": "Eisblau", "hex": "#B5DCE6" },
+        { "name": "Sand", "hex": "#F1DAB1" },
+        { "name": "Orange", "hex": "#FF9137" },
+        { "name": "Koralle", "hex": "#C74C4C" },
+        { "name": "Grün", "hex": "#9AB389" },
+        { "name": "Powder", "hex": "#CA9A8A" }
+      ]
+    },
+    {
+      "title": "Farben | 100% RECYCELT",
+      "colors": [
+        { "name": "Blau", "hex": "#283E64" },
+        { "name": "Grau", "hex": "#BDB7B2" },
+        { "name": "Lava", "hex": "#323232" }
+      ]
+    }
+  ],
+  "stretchable":{
+    "exists":false,
+    "accessories":false,
+    "configurations":false,
+    "measurements":false,
+    "wood":false
+  },
+  "has3D": false
+}

@@ -1,0 +1,15 @@
+{
+  "productName": "DOPPELBANK",
+  "tagline": "Ein Bankmodul mit zwei Sitzzonen",
+
+  
+
+  "stretchable":{
+    "exists":false,
+    "accessories":false,
+    "configurations":false,
+    "measurements":false,
+    "wood":false
+  },
+  "has3D": false
+}

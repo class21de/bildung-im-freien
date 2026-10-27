@@ -1,0 +1,29 @@
+{
+  "productName": "LINEA-BENE",
+  "tagline": "Vielfalt für jeden Ort",
+
+  "measurements": {
+    "type": "table",
+    "sketch":false,
+    "variants": [
+      {"name": "LINEA-BENE 150 mit Rückenlehne", "sketch": "piktogramme/doppelbank.svg", "measurements": {"Bank": {"L/Ø": "150", "B": "46,5", "H": "87", "SH": "45"}, "Stellfläche": {"L/Ø": "150", "B": "57,5", "H": "-", "SH": "-"}}, "weight": "ca. 48 kg"},
+      {"name": "LINEA-BENE 150 ohne Rückenlehne", "sketch": "piktogramme/doppelbank.svg", "measurements": {"Bank": {"L/Ø": "150", "B": "49,5", "H": "45", "SH": "45"}, "Stellfläche": {"L/Ø": "150", "B": "49,5", "H": "-", "SH": "-"}}, "weight": "ca. 36 kg"},
+      {"name": "LINEA-BENE 180 mit Rückenlehne", "sketch": "piktogramme/doppelbank.svg", "measurements": {"Bank": {"L/Ø": "180", "B": "46,5", "H": "87", "SH": "45"}, "Stellfläche": {"L/Ø": "180", "B": "57,5", "H": "-", "SH": "-"}}, "weight": "ca. 55 kg"},
+      {"name": "LINEA-BENE 180 ohne Rückenlehne", "sketch": "piktogramme/doppelbank.svg", "measurements": {"Bank": {"L/Ø": "180", "B": "49,5", "H": "45", "SH": "45"}, "Stellfläche": {"L/Ø": "180", "B": "49,5", "H": "-", "SH": "-"}}, "weight": "ca. 42 kg"},
+      {"name": "LINEA-BENE Tisch 150", "sketch": "piktogramme/doppelbank.svg", "measurements": {"Tisch": {"L/Ø": "150", "B": "87", "H": "87", "SH": "-"}, "Stellfläche": {"L/Ø": "150", "B": "87", "H": "-", "SH": "-"}}, "weight": "ca. 59 kg"},
+      {"name": "LINEA-BENE Tisch 180", "sketch": "piktogramme/doppelbank.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "87", "H": "74", "SH": "-"}, "Stellfläche": {"L/Ø": "180", "B": "87", "H": "-", "SH": "-"}}, "weight": "ca. 67 kg"}
+
+    ]
+  },
+
+  "woodInfo": [
+{"name": "Robinienholz", "image": "/produkte/zubehoer/robinienholz.jpg", "description": "Das Holz der Robinie ist von einer warmen, goldenen Farbe, die mit der Zeit eine edle Patina entwickelt. Robinienholz weist eine natürliche Resistenz gegen Schädlinge und Fäulnis auf. Das macht eine chemische Behandlung überflüssig – ein echter Segen für die Umwelt. Außerdem ist die Robinie die einzige europäische Holzart der Resistenzklasse 1 bis 2 nach DIN 68 364 (= EN 350/2) und das witterungsbeständigste Holz Europas. Robinienhölzer erreichen ohne Imprägnierung Standzeiten von bis zu 50 Jahren!"}  ],
+  "stretchable":{
+    "exists":false,
+    "accessories":false,
+    "configurations":false,
+    "measurements":false,
+    "wood":false
+  },
+  "has3D": false
+}

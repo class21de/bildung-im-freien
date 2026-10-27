@@ -1,0 +1,63 @@
+{
+  "productName": "RUSTIK-FORUM",
+  "tagline": "Wo Gemeinschaft stattfindet",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "RAL 7016 Anthrazitgrau", "color": "#383e42", "material": "RAL 7016"},
+      {"name": "RAL 6017 Maigrün", "color": "#587f40", "material": "RAL 6017"},
+      {"name": "RAL 2000 Gelborange", "color": "#DB6E00", "material": "RAL 2000"},
+      {"name": "RAL 1003 Signalgelb", "color": "#f9a800", "material": "RAL 1003"},
+      {"name": "RAL 5018 Türkisblau", "color": "#058b8c", "material": "RAL 5018"},
+      {"name": "RAL 5019 Capriblau", "color": "#005e83", "material": "RAL 5019"},
+      {"name": "RAL 7035 Lichtgrau", "color": "#C5C7C4", "material": "RAL 7035"},
+      {"name": "RAL 7001 Silbergrau", "color": "#8B959A", "material": "RAL 7001"},
+      {"name": "Feuerverzinkt", "color": "#cccccc", "material": "Feuerverzinkt"}
+    ],
+    "seat": [
+      {"name": "Orange", "color": "#f07b2c", "material": "Orange"},
+      {"name": "Dottergelb", "color": "#fdba13", "material": "Dottergelb"},
+      {"name": "Granny Smith", "color": "#89a348", "material": "Granny Smith"},
+      {"name": "Lichtgrau", "color": "#c0c2bd", "material": "Lichtgrau"}
+    ],
+    "tabletop": [
+      {"name": "Dottergelb", "color": "#fdba13", "material": "Dottergelb"},
+      {"name": "Orange", "color": "#f07b2c", "material": "Orange"},
+      {"name": "Granny Smith", "color": "#89a348", "material": "Granny Smith"},
+      {"name": "Lichtgrau", "color": "#c0c2bd", "material": "Lichtgrau"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "RUSTIK-FORUM", "svg": "piktogramme/rustik-forum-hpl.svg", "modelFile": "modelle/rustik-forum.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.05, 0.00], "viewAngle": 29, "zoom": 1.6}}
+
+  ],
+  "measurements": {
+    "type": "table",
+    "sketch":false,
+    "variants": [
+      {"name": "RUSTIK-FORUM", "sketch": "piktogramme/rustik-forum-hpl.svg", "measurements": {"Tisch": {"L/Ø": "200/150", "B": "60", "H": "74", "SH": "-"}, "Bank": {"L/Ø": "230/207", "B": "30", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "230", "B": "131", "H": "-", "SH": "-"}}, "weight": "ca. 62 kg"},
+      {"name": "RUSTIK-FORUM 7-er Gruppe", "sketch": "piktogramme/rustik-forum-hpl-7-er-gruppe.svg", "measurements": {"Außenmaße": {"L/Ø": "559", "B": "559", "H": "74", "SH": "-"}}, "weight": "ca. 434 kg"},
+      {"name": "RUSTIK-FORUM aus Kiefernholz", "sketch": "piktogramme/rustik-forum-holz.svg", "measurements": {"Tisch": {"L/Ø": "200/150", "B": "60", "H": "74", "SH": "-"}, "Bank": {"L/Ø": "226/201", "B": "30", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "229", "B": "136", "H": "-", "SH": "-"}}, "weight": "ca. 58 kg"},
+      {"name": "RUSTIK-FORUM aus Kiefernholz 7-er Gruppe", "sketch": "piktogramme/rustik-forum-holz-7-er-gruppe.svg", "measurements": {"Außenmaße": {"L/Ø": "563", "B": "561", "H": "74", "SH": "-"}}, "weight": "ca. 406 kg"}
+    ]
+  },
+  "accessories": [
+    {"name": "Pflege der HPL-Vollkernplatten", "image": "/produkte/zubehoer/hpl-care.jpg", "description": "Unsere Pflegeprodukte für HPL-Oberflächen bestehen aus einem speziellen Reiniger, sowie einem HPL-Pflegemittel inkl. Pflgetücher. Bei regelmäßiger Anwendung und Versiegelung erhalten diese Flächen einen guten Schutz gegen UV-Strahlung und Witterungseinflüssen. Wir empfehlen verteilt aufs Jahr drei Anwendungen, wenn Sie in der kalten Jahreszeit unseren Schutzbezug verwenden reichen zwei."},
+    {"name": "Spiral-Bodenanker", "image": "/produkte/zubehoer/spiralbodenanker.jpg", "description": "Unsere Spiral-Bodenanker dienen als Sicherung der Möbel vor einem Verrücken und der Entfernung aus dem Gelände. Sie lassen sich leicht und präzise in den Untergrund einbringen und mit unseren Möbeln verbinden. Ankerlänge: 30 cm, Befestigung mit metrischer Schraube M 8."},
+    {"style":"style=\"height:300px;object-fit:cover\"", "name": "Sicherheitsmerkmale zur Unfallvermeidung", "image": "/produkte/zubehoer/kiefernholz-abrundungen.jpg", "description": "Alle Holzkanten und -ecken sowie die verwendeten Hutmuttern sind abgerundet, um Verletzungsgefahren zu mindern."},
+    {"style":"style=\"width:300px;object-fit:cover\"","name": "Schutz vor Nässe", "image": "/produkte/zubehoer/kunstoffgleiter.jpg", "description": "Das Fußende ist mit 25 mm hohen Kunststoffgleitern ausgestattet, die vor Nässe schützen."}
+  ],
+  "woodInfo": [
+    {"name": "Nordisches Kiefernholz", "image": "/produkte/zubehoer/nordisches-kiefernholz.jpg", "description": "Es wurde mit Silikatsand imprägniert und weist dadurch eine besonders lange Haltbarkeit auf. Es bedarf keiner Oberflächenbehandlung und hält lange Zeit der Witterung stand. Ein deutlicher Vorteil gegenüber dem bislang verwendeten Lärchenholz."}
+  ],
+  "stretchable":{
+    "exists":true,
+    "accessories":true,
+    "configurations":false,
+    "measurements":true,
+    "wood":false
+  },
+  "has3D": true,
+  "galvanizedTexture": "/materialien/feuerverzinkt.jpg",
+  "environmentHdr": "/materialien/environment.hdr"
+}

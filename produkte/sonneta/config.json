@@ -1,0 +1,63 @@
+{
+  "productName": "SONNETA",
+  "tagline": "Der barrierefreie Klassiker für Kommunikation und Miteinander",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "RAL 7016 Anthrazitgrau", "color": "#383e42", "material": "RAL 7016"},
+      {"name": "RAL 6017 Maigrün", "color": "#587f40", "material": "RAL 6017"},
+      {"name": "RAL 2000 Gelborange", "color": "#DB6E00", "material": "RAL 2000"},
+      {"name": "RAL 1003 Signalgelb", "color": "#f9a800", "material": "RAL 1003"},
+      {"name": "RAL 5018 Türkisblau", "color": "#058b8c", "material": "RAL 5018"},
+      {"name": "RAL 5019 Capriblau", "color": "#005e83", "material": "RAL 5019"},
+      {"name": "RAL 7035 Lichtgrau", "color": "#C5C7C4", "material": "RAL 7035"},
+      {"name": "RAL 7001 Silbergrau", "color": "#8B959A", "material": "RAL 7001"},
+      {"name": "Feuerverzinkt", "color": "#cccccc", "material": "Feuerverzinkt"}
+    ],
+    "seat": [
+      {"name": "Orange", "color": "#f07b2c", "material": "Orange"},
+      {"name": "Dottergelb", "color": "#fdba13", "material": "Dottergelb"},
+      {"name": "Granny Smith", "color": "#89a348", "material": "Granny Smith"},
+      {"name": "Lichtgrau", "color": "#c0c2bd", "material": "Lichtgrau"}
+    ],
+    "tabletop": [
+      {"name": "Dottergelb", "color": "#fdba13", "material": "Dottergelb"},
+      {"name": "Orange", "color": "#f07b2c", "material": "Orange"},
+      {"name": "Granny Smith", "color": "#89a348", "material": "Granny Smith"},
+      {"name": "Lichtgrau", "color": "#c0c2bd", "material": "Lichtgrau"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "SONNETA 4-Sitzer", "svg": "piktogramme/sonneta-150.svg", "modelFile": "modelle/sonneta-150.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.1, 0.00], "viewAngle": 29, "zoom": 1.5}},
+    {"name": "SONNETA 6-Sitzer", "svg": "piktogramme/sonneta-180.svg", "modelFile": "modelle/sonneta-180.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.1, 0.00], "viewAngle": 29, "zoom": 1.4}}
+  ],
+  "measurements": {
+    "type": "table",
+    "sketch":false,
+    "variants": [
+      {"name": "SONNETA 4-Sitzer", "sketch": "piktogramme/sonneta-150.svg", "measurements": {"Tisch": {"L/Ø": "150", "B": "100", "H": "74", "SH": "-"}, "Bank": {"L/Ø": "150", "B": "30", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "176", "B": "150", "H": "-", "SH": "-"}}, "weight": "ca. 81 kg"},
+      {"name": "SONNETA 6-Sitzer", "sketch": "piktogramme/sonneta-180.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "100", "H": "74", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "30", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "176", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 93 kg"},
+      {"name": "SONNETA Wood 4-Sitzer", "sketch": "piktogramme/sonneta-150.svg", "measurements": {"Tisch": {"L/Ø": "150", "B": "87", "H": "74", "SH": "-"}, "Bank": {"L/Ø": "150", "B": "33,5", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "164", "B": "150", "H": "-", "SH": "-"}}, "weight": "ca. 119 kg"},
+      {"name": "SONNETA Wood 6-Sitzer", "sketch": "piktogramme/sonneta-180.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "87", "H": "74", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "33,5", "H": "-", "SH": "45"}, "Stellfläche": {"L/Ø": "164", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 137 kg"}
+    ]
+  },
+  "accessories": [
+    {"name": "Pflege der HPL-Vollkernplatten", "image": "/produkte/zubehoer/hpl-care.jpg", "description": "Unsere Pflegeprodukte für HPL-Oberflächen bestehen aus einem speziellen Reiniger, sowie einem HPL-Pflegemittel inkl. Pflgetücher. Bei regelmäßiger Anwendung und Versiegelung erhalten diese Flächen einen guten Schutz gegen UV-Strahlung und Witterungseinflüssen. Wir empfehlen verteilt aufs Jahr drei Anwendungen, wenn Sie in der kalten Jahreszeit unseren Schutzbezug verwenden reichen zwei."},
+    {"name": "Spiral-Bodenanker", "image": "/produkte/zubehoer/spiralbodenanker.jpg", "description": "Unsere Spiral-Bodenanker dienen als Sicherung der Möbel vor einem Verrücken und der Entfernung aus dem Gelände. Sie lassen sich leicht und präzise in den Untergrund einbringen und mit unseren Möbeln verbinden. Ankerlänge: 30 cm, Befestigung mit metrischer Schraube M 8."}
+  ],
+
+  "woodInfo": [
+{"name": "Robinienholz", "image": "/produkte/zubehoer/robinienholz.jpg", "description": "Das Holz der Robinie ist von einer warmen, goldenen Farbe, die mit der Zeit eine edle Patina entwickelt. Robinienholz weist eine natürliche Resistenz gegen Schädlinge und Fäulnis auf. Das macht eine chemische Behandlung überflüssig – ein echter Segen für die Umwelt. Außerdem ist die Robinie die einzige europäische Holzart der Resistenzklasse 1 bis 2 nach DIN 68 364 (= EN 350/2) und das witterungsbeständigste Holz Europas. Robinienhölzer erreichen ohne Imprägnierung Standzeiten von bis zu 50 Jahren!"}  ],
+  "stretchable":{
+    "exists":false,
+    "accessories":false,
+    "configurations":false,
+    "measurements":false,
+    "wood":false
+  },
+
+
+  "has3D": true,
+  "galvanizedTexture": "/materialien/feuerverzinkt.jpg",
+  "environmentHdr": "/materialien/environment.hdr"
+}

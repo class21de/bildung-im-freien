@@ -1,0 +1,54 @@
+{
+  "productName": "INSPIRE",
+  "tagline": "Plätze für unsere Inspiration",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "Kaktus", "color": "farben/kaktus.jpg"},
+      {"name": "Baumwollweiß", "color": "farben/baumwollweiss.jpg"},
+      {"name": "Lehmgrau", "color": "farben/lehmgrau.jpg"},
+      {"name": "Lapilligrau", "color": "farben/lapilligrau.jpg"},
+      {"name": "Gewittergrau", "color": "farben/gewittergrau.jpg"},
+      {"name": "Anthrazit", "color": "farben/anthrazit.jpg"},
+      {"name": "Lakritze", "color": "farben/lakritze.jpg"},
+      {"name": "Rosmarin", "color": "farben/rosmarin.jpg"},
+      {"name": "Lindgrün", "color": "farben/lindgruen.jpg"},
+      {"name": "Pesto", "color": "farben/pesto.jpg"},
+      {"name": "Zederngrün", "color": "farben/zederngruen.jpg"},
+      {"name": "Abyssblau", "color": "farben/abyssblau.jpg"},
+      {"name": "Acapulcoblau", "color": "farben/acapulcoblau.jpg"},
+      {"name": "Maya-Blau", "color": "farben/maya-blau.jpg"},
+      {"name": "Marshmallow", "color": "farben/marshmallow.jpg"},
+      {"name": "Gletscherminze", "color": "farben/gletscherminze.jpg"},
+      {"name": "Zitronensorbet", "color": "farben/zitronensorbet.jpg"},
+      {"name": "Lebkuchen", "color": "farben/lebkuchen.jpg"},
+      {"name": "Tonka", "color": "farben/tonka.jpg"},
+      {"name": "Schwarzkirsche", "color": "farben/schwarzkirsche.jpg"},
+      {"name": "Chili", "color": "farben/chili.jpg"},
+      {"name": "Ockerrot", "color": "farben/ockerrot.jpg"},
+      {"name": "Kandierte Orange", "color": "farben/kandierte-orange.jpg"},
+      {"name": "Honig", "color": "farben/honig.jpg"},
+      {"name": "Muskat", "color": "farben/muskat.jpg"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "INSPIRE 2-Sitzer", "svg": "piktogramme/inspire-2-sitzer.svg", "modelFile": "modelle/inspire-2-sitzer.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.1, 0.00], "viewAngle": 29, "zoom": 2.1}},
+    {"name": "INSPIRE 3-Sitzer", "svg": "piktogramme/inspire-3-sitzer.svg", "modelFile": "modelle/inspire-3-sitzer.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.04, 0.00], "viewAngle": 29, "zoom": 1.85}}
+  ],
+  "measurements": {
+    "type": "images",
+    "images": [
+      "bilder/inspire-bemassung-1.png",
+      "bilder/inspire-bemassung-2.png"
+    ]
+  },
+  "formations": {
+    "videoSources": [
+      {"src": "videos/inspire-3-sitzer.mp4", "type": "video/mp4"},
+      {"src": "videos/inspire-3-sitzer.ogv", "type": "video/ogg"},
+      {"src": "videos/inspire-3-sitzer.webm", "type": "video/webm"}
+    ]
+  },
+  "has3D": true,
+  "environmentHdr": "/materialien/environment.hdr"
+}

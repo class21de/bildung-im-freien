@@ -1,0 +1,58 @@
+{
+  "productName": "DREISTUFEN",
+  "tagline": "Eine Tribüne für spontane Meetings",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "RAL 7016 Anthrazitgrau", "color": "#383e42", "material": "RAL 7016"},
+      {"name": "RAL 6017 Maigrün", "color": "#587f40", "material": "RAL 6017"},
+      {"name": "RAL 2000 Gelborange", "color": "#DB6E00", "material": "RAL 2000"},
+      {"name": "RAL 1003 Signalgelb", "color": "#f9a800", "material": "RAL 1003"},
+      {"name": "RAL 5018 Türkisblau", "color": "#058b8c", "material": "RAL 5018"},
+      {"name": "RAL 5019 Capriblau", "color": "#005e83", "material": "RAL 5019"},
+      {"name": "RAL 7035 Lichtgrau", "color": "#C5C7C4", "material": "RAL 7035"},
+      {"name": "RAL 7001 Silbergrau", "color": "#8B959A", "material": "RAL 7001"},
+      {"name": "Feuerverzinkt", "color": "#cccccc", "material": "Feuerverzinkt"}
+    ],
+    "hpl": [
+      {"name": "Orange", "color": "#f07b2c", "material": "Orange"},
+      {"name": "Dottergelb", "color": "#fdba13", "material": "Dottergelb"},
+      {"name": "Granny Smith", "color": "#89a348", "material": "Granny Smith"},
+      {"name": "Lichtgrau", "color": "#c0c2bd", "material": "Lichtgrau"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "DREISTUFEN", "svg": "piktogramme/dreistufen.svg", "modelFile": "modelle/dreistufen.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 1.1}}
+  ],
+  "measurements": {
+    "type": "table",
+    "sketch":false,
+    "variants": [
+      {"name": "DREISTUFEN", "sketch": "piktogramme/dreistufen.svg",
+        "measurements": {"obere Stufe": {"L/Ø": "127", "B": "44", "H": "90", "SH": "90"},
+        "mittlere Stufe": {"L/Ø": "127", "B": "44", "H": "60", "SH": "60"},
+        "untere Stufe": {"L/Ø": "130", "B": "60", "H": "30", "SH": "30"},
+        "Rückwand": {"L/Ø": "130", "B": "-", "H": "161", "SH": "-"},
+        "Seitenwände": {"L/Ø": "90", "B": "-", "H": "161/96", "SH": "-"},
+        "Außenmaße": {"L/Ø": "130", "B": "151", "H": "180", "SH": "-"}},
+        "weight": "ca. 143 kg"}
+    ]
+  },
+  "accessories": [
+    {"name": "Pflege der HPL-Vollkernplatten", "image": "/produkte/zubehoer/hpl-care.jpg", "description": "Unsere Pflegeprodukte für HPL-Oberflächen bestehen aus einem speziellen Reiniger, sowie einem HPL-Pflegemittel inkl. Pflgetücher. Bei regelmäßiger Anwendung und Versiegelung erhalten diese Flächen einen guten Schutz gegen UV-Strahlung und Witterungseinflüssen. Wir empfehlen verteilt aufs Jahr drei Anwendungen, wenn Sie in der kalten Jahreszeit unseren Schutzbezug verwenden reichen zwei."},
+    {"name": "Spiral-Bodenanker", "image": "/produkte/zubehoer/spiralbodenanker.jpg", "description": "Unsere Spiral-Bodenanker dienen als Sicherung der Möbel vor einem Verrücken und der Entfernung aus dem Gelände. Sie lassen sich leicht und präzise in den Untergrund einbringen und mit unseren Möbeln verbinden. Ankerlänge: 30 cm, Befestigung mit metrischer Schraube M 8."}
+  ],
+  "woodInfo": [
+    {"name": "Nordisches Kiefernholz", "image": "/produkte/zubehoer/nordisches-kiefernholz.jpg", "description": "Es wurde mit Silikatsand imprägniert und weist dadurch eine besonders lange Haltbarkeit auf. Es bedarf keiner Oberflächenbehandlung und hält lange Zeit der Witterung stand. Ein deutlicher Vorteil gegenüber dem bislang verwendeten Lärchenholz."}
+  ],
+  "stretchable":{
+    "exists":false,
+    "accessories":false,
+    "configurations":false,
+    "measurements":false,
+    "wood":false
+  },
+  "has3D": true,
+  "galvanizedTexture": "/materialien/feuerverzinkt.jpg",
+  "environmentHdr": "/materialien/environment.hdr"
+}

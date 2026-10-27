@@ -1,0 +1,51 @@
+{
+  "productName": "TEAMER",
+  "tagline": "Der robuste Gitter-Klassiker für jede Jahreszeit",
+
+  "measurements": {
+    "type": "table",
+    "sketch":true,
+    "variants": [
+      {"name": "TEAMER Grande ohne Rückenlehne, Drahtgitter Tisch- und Sitzplatte", "sketch": "piktogramme/teamer-ohne-rueckenlehne-drahtgitter-tisch-und-sitzplatte.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "77", "H": "73,3", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "43", "H": "43,2", "SH": "43,2"}, "Stellfläche": {"L/Ø": "191", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 84 kg"},
+      {"name": "TEAMER Grande mit einseitiger Rückenlehne, Drahtgitter Tisch- und Sitzplatte", "sketch": "piktogramme/teamer-mit-einseitiger-rueckenlehne-drahtgitter-tisch-und-sitzplatte.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "77", "H": "73,3", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "43/40,8", "H": "82,7", "SH": "43,2"}, "Stellfläche": {"L/Ø": "199,3", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 91 kg"},
+      {"name": "TEAMER Grande mit beidseitiger Rückenlehne, Drahtgitter Tisch- und Sitzplatte", "sketch": "piktogramme/teamer-mit-beidseitiger-rueckenlehne-drahtgitter-tisch-und-sitzplatte.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "77", "H": "73,3", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "43/40,8", "H": "82,7", "SH": "43,2"}, "Stellfläche": {"L/Ø": "207,6", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 98 kg"},
+      {"name": "TEAMER Grande ohne Rückenlehne, HPL-Vollkern-Tischplatte, Sitzteile Drahtgitter", "sketch": "piktogramme/teamer-ohne-rueckenlehne-hpl-vollkern-tischplatte-sitzteile-drahtgitter.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "77", "H": "70,6", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "43", "H": "43,2", "SH": "43,2"}, "Stellfläche": {"L/Ø": "191", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 100 kg"},
+      {"name": "TEAMER Grande mit einseitiger Rückenlehne, HPL-Vollkern-Tischplatte, Sitzteile Drahtgitter", "sketch": "piktogramme/teamer-mit-einseitiger-rueckenlehne-hpl-vollkern-tischplatte-sitzteile-drahtgitter.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "77", "H": "70,6", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "43/40,8", "H": "82,7", "SH": "43,2"}, "Stellfläche": {"L/Ø": "199,3", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 107 kg"},
+      {"name": "TEAMER Grande mit beidseitiger Rückenlehne, HPL-Vollkern-Tischplatte, Sitzteile Drahtgitter", "sketch": "piktogramme/teamer-mit-beidseitiger-rueckenlehnehpl-vollkern-tischplatte-sitzteile-drahtgitter.svg", "measurements": {"Tisch": {"L/Ø": "180", "B": "77", "H": "70,6", "SH": "-"}, "Bank": {"L/Ø": "180", "B": "43/40,8", "H": "82,7", "SH": "43,2"}, "Stellfläche": {"L/Ø": "207,6", "B": "180", "H": "-", "SH": "-"}}, "weight": "ca. 114 kg"}
+    ]
+  },
+  "accessories": [
+    {"name": "Bodenanker", "image": "/produkte/zubehoer/bodenankerset-teamer.png", "description": "Bodenankerset aus Rundrohr, Durchmesser 30 mm, mittels des Bodenankers können alle Bänke ortsfest im Fundament vergossen werden. Inklusive diebstahlhemmender Verschraubung. Maße (B x H): 30 x 300 mm"}
+  ],
+  "colorInfo": [
+    {
+      "title": "Stahlfarben | Schnelllieferprogramm",
+      "colors": [
+        { "name": "DB 703", "hex": "#484850" },
+        { "name": "RAL 9006", "hex": "#a1a1a0" },
+        { "name": "RAL 7016", "hex": "#383e42" }
+      ]
+    },
+    {
+      "title": "Stahlfarben | Lieferung 4-6 Wochen",
+      "colors": [
+        { "name": "RAL 9010", "hex": "#f9f8f2" },
+        { "name": "RAL 3003", "hex": "#a1131f" },
+        { "name": "RAL 6009", "hex": "#0f3325" },
+        { "name": "RAL 1023", "hex": "#fbc34e" },
+        { "name": "RAL 3018", "hex": "#e23046" },
+        { "name": "RAL 6033", "hex": "#00827c" },
+        { "name": "RAL 5002", "hex": "#05316e" }
+      ]
+    }
+  ],
+
+   "stretchable":{
+      "exists":true,
+      "accessories":false,
+      "configurations":false,
+      "measurements":true,
+      "wood":false
+    },
+  "has3D": false
+}

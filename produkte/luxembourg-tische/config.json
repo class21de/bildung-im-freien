@@ -1,0 +1,60 @@
+{
+  "productName": "LUXEMBOURG-Tische",
+  "tagline": "Passende Tische zu den LUXEMBOURG Sitzmöbeln",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "Kaktus", "color": "farben/kaktus.jpg"},
+      {"name": "Baumwollweiß", "color": "farben/baumwollweiss-2.jpg"},
+      {"name": "Lehmgrau", "color": "farben/lehmgrau.jpg"},
+      {"name": "Lapilligrau", "color": "farben/lapilligrau.jpg"},
+      {"name": "Gewittergrau", "color": "farben/gewittergrau.jpg"},
+      {"name": "Anthrazit", "color": "farben/anthrazit.jpg"},
+      {"name": "Lakritze", "color": "farben/lakritze.jpg"},
+      {"name": "Rosmarin", "color": "farben/rosmarin.jpg"},
+      {"name": "Lindgrün", "color": "farben/lindgruen.jpg"},
+      {"name": "Pesto", "color": "farben/pesto.jpg"},
+      {"name": "Zederngrün", "color": "farben/zederngruen.jpg"},
+      {"name": "Abyssblau", "color": "farben/abyssblau.jpg"},
+      {"name": "Acapulcoblau", "color": "farben/acapulcoblau.jpg"},
+      {"name": "Maya-Blau", "color": "farben/maya-blau.jpg"},
+      {"name": "Marshmallow", "color": "farben/marshmallow.jpg"},
+      {"name": "Gletscherminze", "color": "farben/gletscherminze.jpg"},
+      {"name": "Zitronensorbet", "color": "farben/zitronensorbet.jpg"},
+      {"name": "Lebkuchen", "color": "farben/lebkuchen.jpg"},
+      {"name": "Tonka", "color": "farben/tonka.jpg"},
+      {"name": "Schwarzkirsche", "color": "farben/schwarzkirsche.jpg"},
+      {"name": "Chili", "color": "farben/chili.jpg"},
+      {"name": "Ockerrot", "color": "farben/ockerrot.jpg"},
+      {"name": "Kandierte Orange", "color": "farben/kandierte-orange.jpg"},
+      {"name": "Honig", "color": "farben/honig.jpg"},
+      {"name": "Muskat", "color": "farben/muskat.jpg"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "LUXEMBOURG-Tisch LBH = 207x100x74 cm", "svg": "piktogramme/luxembourg-tisch-lbh-207x100x74.svg", "modelFile": "modelle/luxembourg-tisch-lbh-207x100x74.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 1.25}},
+    {"name": "LUXEMBOURG-Tisch LBH = 143x80x74 cm", "svg": "piktogramme/luxembourg-tisch-lbh-143x80x74.svg", "modelFile": "modelle/luxembourg-tisch-lbh-143x80x74.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.00, 0.00], "viewAngle": 29, "zoom": 1.75}},
+    {"name": "LUXEMBOURG-Tisch LBH = 165x100x74 cm", "svg": "piktogramme/luxembourg-tisch-lbh-165x100x74.svg", "modelFile": "modelle/luxembourg-tisch-lbh-165x100x74.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.00, 0.00], "viewAngle": 29, "zoom": 1.5}},
+    {"name": "LUXEMBOURG-Tisch LBH = 80x80x74 cm", "svg": "piktogramme/luxembourg-tisch-lbh-80x80x74.svg", "modelFile": "modelle/luxembourg-tisch-lbh-80x80x74.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.02, 0.00], "viewAngle": 29, "zoom": 2.3}},
+    {"name": "LUXEMBOURG-Säulentisch LBH = 80x80x74 cm", "svg": "piktogramme/luxembourg-saulentisch-lbh-80x80x74.svg", "modelFile": "modelle/luxembourg-saulentisch-lbh-80x80x74.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, 0.05, 0.00], "viewAngle": 29, "zoom": 2.5}},
+    {"name": "LUXEMBOURG-Säulentisch LBH = 71x71x74 cm", "svg": "piktogramme/luxembourg-saulentisch-lbh-71x71x74.svg", "modelFile": "modelle/luxembourg-saulentisch-lbh-71x71x74.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, 0.05, 0.00], "viewAngle": 29, "zoom": 2.65}},
+    {"name": "LUXEMBOURG-Hochtisch LBH = 80x80x105,5 cm", "svg": "piktogramme/luxembourg-hochtisch-lbh-80x80x105,5.svg", "modelFile": "modelle/luxembourg-hochtisch-lbh-80x80x105,5.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, 0.05, 0.00], "viewAngle": 29, "zoom": 2.1}}
+
+  ],
+  "measurements": {
+  "type": "images",
+  "images": [
+    "bilder/luxemburg-tisch-71x71cm-bemassung.png",
+    "bilder/luxemburg-tisch-80x80cm-bemassung.png",
+    "bilder/luxemburg-tisch-80x80x74cm-bemassung.png",
+    "bilder/luxemburg-tisch-80x80x105cm-bemassung.png",
+    "bilder/luxemburg-tisch-80x143cm-bemassung.png",
+    "bilder/luxemburg-tisch-165x100cm-bemassung.png",
+    "bilder/luxemburg-tisch-207x100cm-bemassung.png"
+
+  ]
+},
+
+  "has3D": true,
+  "environmentHdr": "/materialien/environment.hdr"
+}

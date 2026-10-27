@@ -1,0 +1,31 @@
+{
+  "productName": "TREE-MEETING",
+  "tagline": "Die Bank, die den Baum zum Treffpunkt macht",
+
+
+  "measurements": {
+    "type": "images",
+    "images": [
+      "piktogramme/tree-meeting-quadrat-bemassung.svg",
+      "piktogramme/tree-meeting-sechseck-bemassung-1.svg",
+      "piktogramme/tree-meeting-sechseck-bemassung-2.svg",
+      "piktogramme/tree-meeting-achteck-bemassung.svg"
+
+    ]
+  },
+  "stretchable":{
+    "exists":true,
+    "accessories":false,
+    "configurations":false,
+    "measurements":true,
+    "wood":true
+  },
+
+  "woodInfo": [
+      {"name": "Robinienholz", "image": "/produkte/zubehoer/robinienholz.jpg", "description": "Das Holz der Robinie ist von einer warmen, goldenen Farbe, die mit der Zeit eine edle Patina entwickelt. Robinienholz weist eine natürliche Resistenz gegen Schädlinge und Fäulnis auf. Das macht eine chemische Behandlung überflüssig – ein echter Segen für die Umwelt. Außerdem ist die Robinie die einzige europäische Holzart der Resistenzklasse 1 bis 2 nach DIN 68 364 (= EN 350/2) und das witterungsbeständigste Holz Europas. Robinienhölzer erreichen ohne Imprägnierung Standzeiten von bis zu 50 Jahren!"},
+    {"name": "Nordisches Kiefernholz", "image": "/produkte/zubehoer/nordisches-kiefernholz.jpg", "description": "Es wurde mit Silikatsand imprägniert und weist dadurch eine besonders lange Haltbarkeit auf. Es bedarf keiner Oberflächenbehandlung und hält lange Zeit der Witterung stand. Ein deutlicher Vorteil gegenüber dem bislang verwendeten Lärchenholz."}
+
+  ],
+
+  "has3D": false
+}

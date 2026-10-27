@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TREE-MEETING</title>
+
+        <!-- Externe Ressourcen -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+        <!-- Import Map für Three.js -->
+        <script type="importmap">
+            { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+        </script>
+
+        <!-- Unsere CSS-Dateien mit absoluten Pfaden -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/menu.css" />
+        <link rel="stylesheet" href="/css/product.css" />
+    </head>
+    <body lang="de">
+        <div class="page-wrapper">
+            <div class="custom-tooltip">
+                <div class="tooltip-swatch"></div>
+                <p class="tooltip-name"></p>
+            </div>
+
+            <header class="main-header">
+                <div class="container header-container">
+                    <a href="/" class="logo">
+                        <img src="/bilder/logo.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg">
+                    </a>
+
+                    <nav class="main-nav" id="main-nav">
+                        <ul class="nav-list">
+
+                            <li class="nav-item nav-item--has-dropdown">
+                                <a href="#" class="nav-link button-74" id="mobile-products-trigger">Produkte <i class="fas fa-chevron-down fa-xs"></i></a>
+                                <div class="dropdown" id="product-dropdown-container"></div>
+                                <ul class="mobile-submenu-list">
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="adults-products-trigger" data-category="adults"><i class="	fa fa-long-arrow-right"></i> Für Schulkinder & Erwachsene</a></li>
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="kids-products-trigger" data-category="kids"><i class="	fa fa-long-arrow-right"></i> Für Kindergärten</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-item--contact"><a href="/kontakt.html" class="nav-link">Kontakt</a></li>
+                            <li class="nav-item nav-item--imprint"><a href="/impressum.html" class="nav-link">Impressum & Datenschutz</a></li>
+                            <!-- <li class="nav-item nav-item--button"><a href="miteinander-im-freien.pdf" class="nav-link-button"><i class="fa-solid fa-download"></i> Broschüre</a></li> -->
+
+
+                            <li class="nav-item nav-item--button nav-item--has-pdf-dropdown">
+              <a href="#" class="nav-link-button">
+                  <i class="fa-solid fa-download"></i> Broschüren
+              </a>
+              <ul class="pdf-dropdown-menu">
+                <li>
+                    <a href="/bildung-im-freien.pdf">
+                        <i class="fa-solid fa-download"></i> Bildung im Freien
+                    </a>
+                </li>
+                  <li>
+                      <a href="/miteinander-im-freien.pdf">
+                          <i class="fa-solid fa-download"></i> Miteinander im Freien
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/bambini-collection.pdf">
+                          <i class="fa-solid fa-download"></i> Bambini Collection
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/sonnenschirme.pdf">
+                          <i class="fa-solid fa-download"></i> Sonnenschirme
+                      </a>
+                  </li>
+              </ul>
+          </li>
+                        </ul>
+                    </nav>
+
+                    <div id="mobile-submenu-container"></div>
+
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section id="product-page">
+                    <div class="container">
+                        <div class="product-page-heading">
+                            <h1 class="product-name">TREE-MEETING</h1>
+                            <span class="tagline">Die Bank, die den Baum zum Treffpunkt macht</span>
+                        </div>
+                        <div class="top-row-grid">
+                            <div class="product-details">
+                                <div class="product-description">
+                                    <p>
+                                        Der Baum im Zentrum und darunter wir. Bäume spenden Schatten. Sie sind ein Symbol für Stärke und Beständigkeit. Sie helfen uns, zur Ruhe zu kommen und neue Kraft zu schöpfen. Unter ihnen können wir
+                                        uns treffen und versammeln.
+                                    </p>
+                                    <p>Wir haben die Bänke für Menschen, die gerne unter Bäumen sitzen.</p>
+                                    <div class="community-callout">
+                                        <p>
+                                            „Leben einzeln und frei wie ein Baum <br />
+                                            und brüderlich wie ein Wald,<br />
+                                            das ist unsere Sehnsucht.“<br />
+                                            <br />
+                                            <span class="zitat-autor">Nazim Hikmet</span>
+                                        </p>
+                                    </div>
+                                    <p>
+                                        <span class="product-name-inline">TREE-MEETING Sechseck</span> und <span class="product-name-inline">TREE-MEETING Achteck</span> werden aus Edelstahl in Kombination mit hochwertigem Robinienholz
+                                        gefertigt. Ein tolles Design, Langlebigkeit und ein hoher Sitzkomfort sind garantiert.
+                                    </p>
+                                    <p>
+                                        Die Sitzfläche des <span class="product-name-inline">TREE-MEETING Quadrat</span> besteht aus mit Silikat imprägnierter nordischer Kiefer. Sie überzeugt durch ihre natürliche Ausstrahlung sowie
+                                        Langlebigkeit. Alternativ kann die Sitzfläche auch aus hochwertigem und deutlich härterem Robinienholz gefertigt werden.
+                                    </p>
+                                    <p>
+                                        Für optimalen Korrosionsschutz erhalten die Gestelle des <span class="product-name-inline">TREE-MEETING Quadrat</span> eine Feuerverzinkung. Mit einer zusätzlichen Pulverbeschichtung wird der
+                                        Korrosionsschutz erhöht und es ergeben sich farbliche Gestaltungsmöglichkeiten.
+                                    </p>
+                                    <p>
+                                        Alle <span class="product-name-inline">TREE-MEETING</span> Modelle werden individuell nach Ihren Vorgaben hergestellt, daher müssen die Preise angefragt werden. Die gezeigten Maße verstehen Sie bitte
+                                        als Vorschläge.
+                                    </p>
+                                </div>
+
+                                <!-- Dynamic product description will be populated here -->
+
+                                <div class="accordion-container">
+                                    <!-- ACCORDION ITEMS WILL BE DYNAMICALLY GENERATED HERE -->
+                                </div>
+                            </div>
+                            <div class="gallery-section">
+                                <div class="community-callout-2">
+                                    <p>
+                                        „Bäume sind Gedichte,<br />
+                                        die die Erde in den Himmel schreibt“<br />
+                                        <br />
+                                        <span class="zitat-autor">Khalil Gibran</span>
+                                    </p>
+                                </div>
+
+                                <div class="product-image-collage" id="image-collage-container">
+                                    <div class="collage-image-wrapper"><img src="bilder/tree-meeting-6.jpg" alt="TREE-MEETING" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/tree-meeting-5.jpg" alt="TREE-MEETING" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/tree-meeting-3.jpg" alt="TREE-MEETING" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/tree-meeting-7.jpg" alt="TREE-MEETING" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/tree-meeting-2.jpg" alt="TREE-MEETING" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="container">
+                    
+                    <div class="footer-links"><a href="/kontakt.html">Kontakt</a><a href="/impressum.html">Impressum & Datenschutz</a></div>
+                    <p class="copyright">&copy; 2025 Martin Brauns | Alle Rechte vorbehalten.</p>
+                </div>
+            </footer>
+
+            <div id="image-modal" class="image-modal"><span class="modal-close">&times;</span><img class="image-modal-content" id="modal-image" /></div>
+
+            <!-- Unsere JS-Dateien -->
+            <script src="/js/product-page.js"></script>
+            <script type="module" src="/js/configurator.js"></script>
+            <script src="/js/menu.js"></script>
+        </div>
+        <!-- End of page-wrapper -->
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WERKHAUS-BAMBINI</title>
+
+        <!-- Externe Ressourcen -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+        <!-- Import Map für Three.js -->
+        <script type="importmap">
+            { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+        </script>
+
+        <!-- Unsere CSS-Dateien mit absoluten Pfaden -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/menu.css" />
+        <link rel="stylesheet" href="/css/product.css" />
+    </head>
+    <body lang="de">
+        <div class="page-wrapper">
+            <div class="custom-tooltip">
+                <div class="tooltip-swatch"></div>
+                <p class="tooltip-name"></p>
+            </div>
+
+            <header class="main-header">
+                <div class="container header-container">
+                    <a href="/" class="logo">
+                        <img src="/bilder/logo.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg">
+                    </a>
+
+                    <nav class="main-nav" id="main-nav">
+                        <ul class="nav-list">
+
+                            <li class="nav-item nav-item--has-dropdown">
+                                <a href="#" class="nav-link button-74" id="mobile-products-trigger">Produkte <i class="fas fa-chevron-down fa-xs"></i></a>
+                                <div class="dropdown" id="product-dropdown-container"></div>
+                                <ul class="mobile-submenu-list">
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="adults-products-trigger" data-category="adults"><i class="	fa fa-long-arrow-right"></i> Für Schulkinder & Erwachsene</a></li>
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="kids-products-trigger" data-category="kids"><i class="	fa fa-long-arrow-right"></i> Für Kindergärten</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-item--contact"><a href="/kontakt.html" class="nav-link">Kontakt</a></li>
+                            <li class="nav-item nav-item--imprint"><a href="/impressum.html" class="nav-link">Impressum & Datenschutz</a></li>
+                            <!-- <li class="nav-item nav-item--button"><a href="miteinander-im-freien.pdf" class="nav-link-button"><i class="fa-solid fa-download"></i> Broschüre</a></li> -->
+
+
+                            <li class="nav-item nav-item--button nav-item--has-pdf-dropdown">
+              <a href="#" class="nav-link-button">
+                  <i class="fa-solid fa-download"></i> Broschüren
+              </a>
+              <ul class="pdf-dropdown-menu">
+                <li>
+                    <a href="/bildung-im-freien.pdf">
+                        <i class="fa-solid fa-download"></i> Bildung im Freien
+                    </a>
+                </li>
+                  <li>
+                      <a href="/miteinander-im-freien.pdf">
+                          <i class="fa-solid fa-download"></i> Miteinander im Freien
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/bambini-collection.pdf">
+                          <i class="fa-solid fa-download"></i> Bambini Collection
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/sonnenschirme.pdf">
+                          <i class="fa-solid fa-download"></i> Sonnenschirme
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+                        </ul>
+                    </nav>
+
+                    <div id="mobile-submenu-container"></div>
+
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section id="product-page">
+                    <div class="container">
+                        <div class="product-page-heading">
+                            <h1 class="product-name">WERKHAUS-BAMBINI</h1>
+                            <span class="tagline">Für den Aufenthalt im Freien mit integriertem Sonnenschutz</span>
+                        </div>
+                        <div class="top-row-grid">
+                            <div class="product-details">
+                                <div class="product-description">
+                                    <p><span class="product-name-inline">WERKHAUS-BAMBINI</span> entstand aus der Idee, sich im Freien aufhalten zu können und gleichzeitig vor intensiver Sonneneinstrahlung geschützt zu sein. Im <span class="product-name-inline">WERKHAUS-BAMBINI</span> können die Kinder sitzen und gemeinsam essen, plaudern, spielen, basteln und vieles mehr. Hier finden vier Bambini bequem Platz.</p>
+                                    <p>
+                                      Der Sonnenschutz besteht aus einem Segeltuch, welches oben und an den Rückseiten des <span class="product-name-inline">WERKHAUS-BAMBINI</span> montiert ist. Es ist außerdem sinnvoll, je nach Sonnenstand eine weitere Seite zu schließen. Durch das grob gewebte Tuch wird ein optimaler Luftaustausch gewährleistet.
+                                    </p>
+                                    <p>
+                                      <span class="product-name-inline">WERKHAUS-BAMBINI</span> lässt sich farblich optimal seiner Umgebung anpassen. Für die feuerverzinkte und pulverbeschichtete Metallkonstruktion stehen dafür acht, für die HPL-Vollkernplatten der Tisch-, Sitz- und Rückenlehnenfläche vier und für das Sonnentuch zwei Farben zur Auswahl.
+
+                                    </p>
+
+                                    <p>Die verwendeten <span class="product-name-inline">WERKHAUS-BAMBINI</span>-Materialien ermöglichen eine besonders hohe Lebensdauer.</p>
+                                </div>
+
+                                <!-- Dynamic product description will be populated here -->
+
+                                <div class="accordion-container">
+                                    <div class="accordion-item">
+                                        <button class="accordion-header"><span>Varianten & Maße</span><i class="fas fa-plus"></i></button>
+                                        <div class="accordion-content">
+                                            <div class="content-wrapper">
+                                                // Dynamic measurements will be populated here
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <button class="accordion-header"><span>Zubehör & Merkmale</span><i class="fas fa-plus"></i></button>
+                                        <div class="accordion-content">
+                                            <div class="content-wrapper">
+                                                // Dynamic accessories will be populated here
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-section">
+                                <div class="product-image-collage" id="image-collage-container">
+                                    <div class="collage-image-wrapper"><img src="bilder/werkhaus-bambini-1.jpg" alt="WERKHAUS Bambini" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/werkhaus-bambini-2.jpg" alt="WERKHAUS Bambini" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/werkhaus-bambini-3.jpg" alt="WERKHAUS Bambini" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/werkhaus-bambini-4.jpg" alt="WERKHAUS Bambini" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/werkhaus-bambini-5.jpg" alt="WERKHAUS Bambini" /></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="configurator-intro">Hier können Sie <span class="product-name-inline">WERKHAUS</span> konfigurieren</p>
+                        <div class="bottom-row-grid">
+                            <div class="configurator-controls-wrapper">
+                                <div class="model-switcher-container">
+                                    <p class="switcher-hint">Modell wählen:</p>
+                                    <div id="model-switcher"></div>
+                                </div>
+                                <div class="configurator-controls">
+                                    <div class="config-section">
+                                        <label class="config-label">Gestell</label>
+                                        <div class="swatch-container" id="frame-swatches"></div>
+                                    </div>
+                                    <div class="config-section">
+                                        <label class="config-label">Sitzflächen (HPL-Vollkernplatte)</label>
+                                        <div class="swatch-container" id="seat-swatches"></div>
+                                    </div>
+                                    <div class="config-section">
+                                        <label class="config-label">Tischplatte (HPL-Vollkernplatte)</label>
+                                        <div class="swatch-container" id="tabletop-swatches"></div>
+                                    </div>
+                                    <div class="config-section">
+                                        <label class="config-label">Sonnentuch</label>
+                                        <div class="swatch-container" id="fabric-swatches"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="configurator-container">
+                                <div id="loading-overlay"><div>Modell wird geladen...</div></div>
+                                <button id="save-screenshot-btn" class="icon-btn" aria-label="Save Model Screenshot">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Speichern</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="container">
+                    
+                    <div class="footer-links"><a href="/kontakt.html">Kontakt</a><a href="/impressum.html">Impressum & Datenschutz</a></div>
+                    <p class="copyright">&copy; 2025 Martin Brauns | Alle Rechte vorbehalten.</p>
+                </div>
+            </footer>
+
+            <div id="image-modal" class="image-modal"><span class="modal-close">&times;</span><img class="image-modal-content" id="modal-image" /></div>
+
+            <!-- Unsere JS-Dateien -->
+            <script src="/js/product-page.js"></script>
+            <script type="module" src="/js/configurator-werkhaus.js"></script>
+            <script src="/js/menu.js"></script>
+        </div>
+        <!-- End of page-wrapper -->
+    </body>
+</html>

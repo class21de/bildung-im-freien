@@ -1,0 +1,806 @@
+/* /css/product.css */
+.community-callout {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: var(--color-primary);
+  /* border-left: 4px solid var(--color-white); */
+  border-radius:25px;
+  color: var(--color-white);
+  padding: 10px 10px 1px 10px}
+
+  .community-callout p {
+    text-align: center !important;
+  }
+
+  .community-callout-2{
+    margin: 0 0 20px 0;
+    padding: 1rem 1.5rem !important;
+    background: #527A23;
+    /* border-left: 4px solid var(--color-white); */
+    border-radius:25px;
+    color: var(--color-white);
+    padding: 10px 10px 1px 10px
+  }
+.community-callout-2 p{
+    text-align: center !important;
+}
+
+  .zitat-autor{
+    font-size: 15px;
+  }
+
+/* Styling für PDF-Download-Links in der Produktbeschreibung */
+.product-description .pdf-link-list {
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Abstand zwischen den Buttons */
+}
+
+.product-description .pdf-link-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.product-description .pdf-link-list a {
+    /* Übernimmt den Stil der .nav-link-button Klasse */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 7px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    box-shadow: var(--shadow-subtle);
+}
+
+.product-description .pdf-link-list a:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+/* Fügt automatisch ein PDF-Icon vor dem Linktext hinzu */
+.product-description .pdf-link-list a::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f1c1"; /* Font Awesome PDF Icon */
+    font-weight: 900;
+    font-size: 1em;
+}
+
+.variant-card h3{
+  font-size: 15px;
+  text-align: center;
+}
+
+#product-page {
+    padding-top: 65px;
+    padding-bottom: 50px;
+}
+
+.product-page-heading {
+    margin-bottom: 1.25rem;
+}
+
+/* Spezifische H1-Anpassung für die Produktseite */
+h1.product-name, .product-page-heading h1 {
+    font-family: var(--font-product);
+    color: var(--color-product);
+    text-shadow: 0.5px 0.5px 0 #1e2e65;
+    font-weight: normal;
+}
+
+.product-page-heading .tagline {
+    display: block;
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.product-details p {
+    margin-bottom: var(--paragraph-spacing);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+.product-details ul {
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.product-details ul li {
+    /* margin-bottom: 0.5rem; */
+    line-height: 1.25;
+}
+
+/* Accordion */
+.accordion-container {
+    margin-top: 40px;
+}
+.accordion-item {
+    border-bottom: 1px solid #d1c9bd;
+}
+.accordion-item:first-of-type {
+    border-top: 1px solid #d1c9bd;
+}
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+.accordion-header:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+.accordion-header i {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+.accordion-item.active .accordion-content {
+    max-height: 3000px;
+    padding-bottom: 25px;
+}
+
+
+
+.accordion-content .content-wrapper {
+    padding: 20px 5px 0;
+}
+
+/* Variants & Accessories */
+.variants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.variant-card {
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    box-shadow: var(--shadow-subtle);
+}
+.variant-card .variant-sketch {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.variant-card .variant-sketch img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px;
+}
+.variant-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+.variant-card th, .variant-card td {
+    padding: 3px 5px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    vertical-align: middle;
+}
+.variant-card th {
+    font-weight: 500;
+    color: #555;
+}
+.variant-card th:first-child, .variant-card td:first-child {
+    text-align: left;
+}
+.variant-card tr:last-child td {
+    border-bottom: none;
+}
+.accessories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.accessory-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.accessory-item div h3{
+  font: var(--font-heading);
+}
+.accessory-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    border: 1px solid #eee;
+}
+.accessory-item div p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* New Styles for Wood Info Section */
+.wood-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.wood-info-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin: 0;
+}
+.wood-info-item img {
+    /* max-width: 300px; */
+    object-fit: cover;
+    width: 100%;
+    height:100px;
+    /* height: auto; */
+    border-radius: var(--border-radius);
+    background: none;
+    border: none;
+    padding: 0;
+}
+.wood-info-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    max-width: 600px;
+}
+
+
+/* Color Tab Styles */
+.colorsContainer {
+    margin-bottom: 25px;
+}
+.colorsContainer:last-child {
+    margin-bottom: 0;
+}
+.colorTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: var(--font-heading);
+}
+.colorBlock {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 55px 5px 5px 5px;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+/* Specific text colors for light backgrounds */
+.colorBlock[style*="#f9f8f2"],
+.colorBlock[style*="#a1a1a0"],
+.colorBlock[style*="#fbc34e"] {
+    color: #333;
+    text-shadow: none;
+}
+
+/* Image Gallery & Modal */
+.product-image-collage {
+    column-count: 2;
+    column-gap: 20px;
+}
+.collage-image-wrapper {
+    margin-bottom: 20px;
+    break-inside: avoid;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    cursor: pointer;
+    border: 2px solid #383E42;
+}
+.collage-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+.collage-image-wrapper:hover img {
+    opacity: 0.85;
+}
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+    transition: opacity 0.3s ease;
+}
+.image-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 85vh;
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.modal-close:hover, .modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+@keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
+
+/* Layout Grids */
+.top-row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+.bottom-row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 50px;
+}
+
+/* Configurator & Controls */
+.configurator-controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.switcher-hint, .config-label {
+    font-size: 18px !important;
+    font-weight: 600 !important; /* Semibold */
+    font-family: var(--font-heading);
+}
+.switcher-hint {
+    color: #555;
+    margin-bottom: 10px;
+}
+.config-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.model-switcher-container {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-subtle);
+}
+#model-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.model-switcher-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s, background-color 0.3s;
+    width: 110px;
+}
+.model-switcher-item-custom{
+    width: auto;
+}
+
+.model-switcher-item:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.model-switcher-item.active {
+    border-color: var(--color-primary);
+    background-color: rgba(217, 119, 70, 0.08);
+}
+.model-svg {
+    height: 65px;
+}
+.model-name {
+    color: var(--color-text);
+    text-align: center;
+    line-height: 1.2;
+    font-size: 14px !important; /* Specific override */
+}
+
+#configurator-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-subtle);
+}
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    z-index: 100;
+    font-family: var(--font-body);
+    transition: opacity 0.3s;
+}
+
+.configurator-intro {
+    font-size: 18px;
+    margin: 0 0 1rem 0;
+    text-align: left;
+}
+.configurator-controls {
+    padding: 25px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-subtle);
+}
+.config-section {
+    margin-bottom: 10px;
+}
+.config-section:last-child {
+    margin-bottom: 0;
+}
+.swatch-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.swatch-option {
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+.swatch-option .swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.swatch-option.active {
+    border-color: var(--color-primary);
+}
+
+/* Tooltip for Swatches */
+.custom-tooltip {
+    position: fixed;
+    background: var(--color-white);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-strong);
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 1100;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.custom-tooltip .tooltip-swatch {
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+.custom-tooltip .tooltip-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* Save Screenshot Button */
+#save-screenshot-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 100; /* Ensure it's above the canvas */
+    padding: 5px 10px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-strong);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#save-screenshot-btn:hover {
+    background-color: #d9683a; /* A slightly darker shade of primary */
+    transform: translateY(-2px);
+}
+
+#save-screenshot-btn i {
+    font-size: 1.2rem;
+}
+
+
+/* Debug Controls (hidden by default) */
+#debug-controls {
+    display: none;
+}
+
+/* --- Responsive adjustments for product page --- */
+@media (max-width: 1200px) {
+    .top-row-grid, .bottom-row-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    /* Define grid areas for the new stacking order */
+    .bottom-row-grid {
+        grid-template-areas:
+            "switcher"
+            "viewer"
+            "controls";
+    }
+
+    /* Make the wrapper transparent to the grid, promoting its children */
+    .configurator-controls-wrapper {
+        display: contents;
+    }
+
+    /* Assign the model switcher to the top area */
+    .model-switcher-container {
+        grid-area: switcher;
+    }
+
+    /* Assign the viewer to the middle area */
+    #configurator-container {
+        grid-area: viewer;
+        height: 50vh;
+    }
+
+    /* Assign the color/material controls to the bottom area */
+    .configurator-controls {
+        grid-area: controls;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-image-collage {
+        column-count: 1;
+    }
+    .configurator-intro{
+      margin-top: -30px;
+    }
+}
+/*
+@media (max-width: 1050px) {
+    #configurator-container {
+        min-height: 512px;
+        height: 43vh;
+    }
+} */
+
+@media (max-width: 1000px) {
+    #configurator-container {
+        min-height: 730px;
+        height: 43vh;
+    }
+}
+
+@media (max-width: 950px) {
+    #configurator-container {
+        min-height: 690px;
+    }
+}
+
+@media (max-width: 900px) {
+    #configurator-container {
+        min-height: 650px;
+    }
+}
+
+@media (max-width: 850px) {
+    #configurator-container {
+        min-height: 610px;
+    }
+}
+
+@media (max-width: 800px) {
+    #configurator-container {
+        min-height: 570px;
+    }
+}
+
+@media (max-width: 750px) {
+    #configurator-container {
+        min-height: 530px;
+    }
+}
+
+@media (max-width: 700px) {
+    #configurator-container {
+        min-height: 490px;
+    }
+}
+
+@media (max-width: 650px) {
+    #configurator-container {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    #configurator-container {
+        min-height: 410px;
+    }
+}
+
+@media (max-width: 550px) {
+    #configurator-container {
+        min-height: 370px;
+    }
+}
+
+@media (max-width: 500px) {
+    #configurator-container {
+        min-height: 330px;
+    }
+}
+
+@media (max-width: 450px) {
+    #configurator-container {
+        min-height: 290px;
+        height: 34vh;
+    }
+}
+
+@media (max-width: 400px) {
+    #configurator-container {
+        min-height: 250px;
+        height: 34vh;
+    }
+}
+
+@media (max-width: 350px) {
+    #configurator-container {
+        min-height: 210px;
+        height: 28vh;
+    }
+}
+
+
+/*
+==========================================================================
+  START: NEW ACCORDION EXPANSION STYLES
+==========================================================================
+*/
+
+/* This block handles the expanded, full-width state for specific accordions.
+   It only applies on desktop screens (wider than 1200px). */
+@media (min-width: 1201px) {
+
+    /* This is the container for the accordion content when it has been
+       moved out by the JavaScript to sit below the main grid. */
+    .accordion-content.is-external {
+        display: block; /* Makes it visible */
+        max-height: none; /* Overrides the default accordion hiding style */
+        padding: 0px 0 25px 0; /* Vertical spacing */
+        box-sizing: border-box;
+    }
+
+    /* This is the white box with shadow inside the container. */
+    .accordion-content.is-external .content-wrapper {
+        /* padding: 25px; */
+        /* background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-subtle); */
+        /* border: 1px solid #eee; */
+    }
+
+    /* --- SPECIFIC LAYOUTS FOR EXPANDED CONTENT --- */
+
+    /* 1. Configuration Examples: 4-column grid */
+    .accordion-content.is-external .variants-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* 2. Accessories: 2-column grid */
+    .accordion-content.is-external .accessories-list {
+        display: grid; /* IMPORTANT: Overrides the default 'display: flex' */
+        grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+        gap: 30px;
+        align-items: start; /* Aligns items to the top for a clean look */
+    }
+
+    /* 3. Wood Info: 2-column grid */
+    .accordion-content.is-external .wood-info-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    /* 4. Measurements: 4-column grid */
+    .accordion-content.is-external.external-measurements-accordion .variants-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/*
+==========================================================================
+  END: NEW ACCORDION EXPANSION STYLES
+==========================================================================
+*/

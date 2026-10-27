@@ -1,0 +1,222 @@
+/* /css/style.css */
+:root {
+    --color-background: #F5F0E8;
+    --color-text: #222222;
+    --color-primary: #D97746;
+    --color-primary-dark: #b86236;
+    --color-white: #ffffff;
+    --font-heading: 'Sen', sans-serif;
+    --font-body: 'Sen', sans-serif;
+    --font-product: 'Baumans', sans-serif;
+    --shadow-subtle: 0 4px 12px rgba(0,0,0,0.05);
+    --shadow-strong: 0 8px 30px rgba(0,0,0,0.1);
+    --border-radius: 10px;
+    --paragraph-spacing: 1rem;
+    --color-product: #1e2e65;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.25;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 600; /* Semibold */
+    line-height: 1.5;
+    font-size: 24px;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+section {
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+/* Common Button Style */
+.nav-link-button {
+    display: inline-flex; align-items: center; gap: 10px;
+    background-color: var(--color-primary); color: var(--color-white);
+    padding: 7px 18px; border-radius: 6px; text-decoration: none;
+    font-weight: 500; transition: background-color 0.3s ease;
+    box-shadow: var(--shadow-subtle);
+}
+.nav-link-button:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+.nav-link-button i { font-size: 1em; }
+
+/* Footer */
+footer {
+    background: #e9e2d8;
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin-top: 40px;
+}
+.footer-links {
+    margin: 15px 0;
+}
+.footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+.copyright { color: #777; }
+
+/* .logo .logo-svg {
+    height: 60px;
+    display: block;
+    width: auto;
+} */
+
+.logo .logo-svg {
+    height:119px;
+    display: block;
+    width: auto;
+}
+
+.header-container {
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: -116px;
+    z-index: 10;
+}
+
+.logo-product-page .logo-product-page-svg{
+  height:119px;
+  display: block;
+  width: auto;
+}
+
+.logo-product-page{
+  position: absolute;
+  top: 0px;
+  left: -35px;
+  z-index: 10;
+}
+
+.main-nav {
+    margin-left: 363px;
+}
+
+footer .logo .logo-svg {
+    height: 40px;
+    margin: 0 auto;
+}
+
+/* Product Font Style */
+.dropdown-link-item p, .slider-title-btn > span:first-child,
+.featured-content h3, .model-name, .variant-card h3, .accessory-item div h3 {
+    font-family: var(--font-product);
+    font-weight: bold;
+}
+
+.product-name-inline{
+  font-family: var(--font-product);
+  color: var(--color-product);
+  text-shadow: 0.3px 0.3px 0 #1e2e65;
+  
+  /* Prevent automatic dictionary hyphenation */
+  hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+
+  /* Prevent the word from breaking at the existing hyphen (-) */
+  white-space: nowrap;
+}
+
+@media (max-width: 1500px) {
+
+  .logo {
+      left: -60px;
+  }
+}
+
+@media (max-width: 1405px) {
+
+  .logo {
+      left: 0px;
+  }
+}
+
+@media (max-width: 1405px) {
+
+  .logo-product-page {
+      left: 0px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+  .logo {
+      left: 20px;
+  }
+}
+
+@media (max-width: 1240px) {
+
+  .logo, .logo-product-page{
+    position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+  }
+  .main-header{
+    border-bottom:none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo, .logo-svg, .logo-product-page, .logo-product-page-svg{
+      height:90px !important;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .logo, .logo-svg, .logo-product-page, .logo-product-page-svg {
+      height:75px !important;
+  }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SONNENSCHIRME</title>
+
+        <!-- Externe Ressourcen -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+        <!-- Import Map für Three.js -->
+        <script type="importmap">
+            { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+        </script>
+
+        <!-- Unsere CSS-Dateien mit absoluten Pfaden -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/menu.css" />
+        <link rel="stylesheet" href="/css/product.css" />
+    </head>
+    <body lang="de">
+        <div class="page-wrapper">
+            <div class="custom-tooltip">
+                <div class="tooltip-swatch"></div>
+                <p class="tooltip-name"></p>
+            </div>
+
+            <header class="main-header">
+                <div class="container header-container">
+                    <a href="/" class="logo">
+                        <img src="/bilder/logo.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg">
+                    </a>
+
+                    <nav class="main-nav" id="main-nav">
+                        <ul class="nav-list">
+
+                            <li class="nav-item nav-item--has-dropdown">
+                                <a href="#" class="nav-link button-74" id="mobile-products-trigger">Produkte <i class="fas fa-chevron-down fa-xs"></i></a>
+                                <div class="dropdown" id="product-dropdown-container"></div>
+                                <ul class="mobile-submenu-list">
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="adults-products-trigger" data-category="adults"><i class="	fa fa-long-arrow-right"></i> Für Schulkinder & Erwachsene</a></li>
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="kids-products-trigger" data-category="kids"><i class="	fa fa-long-arrow-right"></i> Für Kindergärten</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-item--contact"><a href="/kontakt.html" class="nav-link">Kontakt</a></li>
+                            <li class="nav-item nav-item--imprint"><a href="/impressum.html" class="nav-link">Impressum & Datenschutz</a></li>
+                            <!-- <li class="nav-item nav-item--button"><a href="miteinander-im-freien.pdf" class="nav-link-button"><i class="fa-solid fa-download"></i> Broschüre</a></li> -->
+
+
+                            <li class="nav-item nav-item--button nav-item--has-pdf-dropdown">
+              <a href="#" class="nav-link-button">
+                  <i class="fa-solid fa-download"></i> Broschüren
+              </a>
+              <ul class="pdf-dropdown-menu">
+                <li>
+                    <a href="/bildung-im-freien.pdf">
+                        <i class="fa-solid fa-download"></i> Bildung im Freien
+                    </a>
+                </li>
+                  <li>
+                      <a href="/miteinander-im-freien.pdf">
+                          <i class="fa-solid fa-download"></i> Miteinander im Freien
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/bambini-collection.pdf">
+                          <i class="fa-solid fa-download"></i> Bambini Collection
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/sonnenschirme.pdf">
+                          <i class="fa-solid fa-download"></i> Sonnenschirme
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+                        </ul>
+                    </nav>
+
+                    <div id="mobile-submenu-container"></div>
+
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section id="product-page">
+                    <div class="container">
+                        <div class="product-page-heading">
+                            <h1 class="product-name">SONNENSCHIRME</h1>
+                            <span class="tagline">Der zuverlässige Sonnenschutz für große Gruppen und Plätze</span>
+                        </div>
+                        <div class="top-row-grid">
+                            <div class="product-details">
+                                <div class="product-description">
+                                    <p>Wenn die kleinen Kinder sich für längere Zeit in der Sonne aufhalten, ist es wichtig, auch beschattete Orte anzubieten. Als Sonnenschutz und als Schutz vor leichtem vorübergehenden Regen bieten wir zu unseren Außenraummöbeln unsere robusten funktionalen Sonnenschirme an.</p>
+                                    <p>Wir unterscheiden vier Kategorien:</p>
+                                    <ul>
+                                        <li><span class="product-name-inline">GRANDE</span> - besonders große Mittelmastschirme mit Durchmessern von bis zu 9,50 m</li>
+                                        <li><span class="product-name-inline">SUN-PREMIUM</span> - Mittelmastschirme mit bis zu 5 m Durchmesser</li>
+                                        <li><span class="product-name-inline">SUN-PREMIUM</span> - Ampelschirme</li>
+                                        <li>
+                                            <span class="product-name-inline">SUN-PREMIUM DUO</span> Ampelschirme bestehend aus zwei Schirmdächern oder <span class="product-name-inline">SUN PREMIUM QUADRO</span> Ampelschirme bestehend aus vier Schirmdächern, jeweils mit mittig gestelltem Mast, an dem die Schirmdächer separat geöffnet und geschlossen werden können.
+                                        </li>
+                                    </ul>
+
+                                    <p>
+                                      Der Mittelmast-Sonnenschirm <span class="product-name-inline">SUN-PREMIUM</span> verfügt über eine besonders innovative Mechanik: Ein Fingerdruck auf den Entriegelungshebel genügt und der Schirm entfaltet sich durch sein Eigengewicht zur Hälfte selbsttätig. Nun muss nur noch der Handgriff leicht nach oben geschoben und verriegelt werden. Dieses System erlaubt ein schnelles und leichtes Handling. Durch einen doppelten Strebenkranz werden die Hauptstreben, an denen das Tuch befestigt ist, doppelt abgestützt. Bei großen Schirmen sind die Streben durch ein innenliegendes Aluminiumprofil zusätzlich verstärkt. Der Schirm ist deshalb besonders robust und windstabil.
+                                    </p>
+
+                                    <p>Weitere Informationen finden Sie unter folgendem Link in unserer Sonnenschirmbroschüre:</p>
+                                    <ul class="pdf-link-list">
+                                        <li><a href="broschuere/sonnenschirme.pdf" target="_blank" rel="noopener noreferrer">Sonnenschirme Prospekt</a></li>
+                                    </ul>
+                                  </p>
+                                  <p>Bitte nehmen Sie mit uns Kontakt auf, wenn Sie für Ihr Freigelände unser Angebot benötigen. Wir beraten Sie umfassend und kompetent für eine optimale Ausstattung.</p>
+                                </div>
+                                <!-- Dynamic product description will be populated here -->
+
+                                <div class="accordion-container">
+                                    <!-- ACCORDION ITEMS WILL BE DYNAMICALLY GENERATED HERE -->
+                                </div>
+                            </div>
+                            <div class="gallery-section">
+                                <div class="product-image-collage" id="image-collage-container">
+                                    <div class="collage-image-wrapper"><img src="bilder/grande-1.jpg" alt="SONNENSCHIRME Ansicht 1" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/sun-premium-duo-1.jpg" alt="SONNENSCHIRME Ansicht 2" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/sun-premium-1.jpg" alt="SONNENSCHIRME Ansicht 3" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/sun-premium-quadro-1.jpg" alt="SONNENSCHIRME Ansicht 4" /></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="container">
+                    
+                    <div class="footer-links"><a href="/kontakt.html">Kontakt</a><a href="/impressum.html">Impressum & Datenschutz</a></div>
+                    <p class="copyright">&copy; 2025 Martin Brauns | Alle Rechte vorbehalten.</p>
+                </div>
+            </footer>
+
+            <div id="image-modal" class="image-modal"><span class="modal-close">&times;</span><img class="image-modal-content" id="modal-image" /></div>
+
+            <!-- Unsere JS-Dateien -->
+            <script src="/js/product-page.js"></script>
+            <script type="module" src="/js/configurator.js"></script>
+            <script src="/js/menu.js"></script>
+        </div>
+        <!-- End of page-wrapper -->
+    </body>
+</html>

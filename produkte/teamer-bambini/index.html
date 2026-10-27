@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TEAMER-BAMBINI</title>
+
+        <!-- Externe Ressourcen -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+        <!-- Import Map für Three.js -->
+        <script type="importmap">
+            { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+        </script>
+
+        <!-- Unsere CSS-Dateien mit absoluten Pfaden -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/menu.css" />
+        <link rel="stylesheet" href="/css/product.css" />
+    </head>
+    <body lang="de">
+        <div class="page-wrapper">
+            <div class="custom-tooltip">
+                <div class="tooltip-swatch"></div>
+                <p class="tooltip-name"></p>
+            </div>
+
+            <header class="main-header">
+                <div class="container header-container">
+                    <a href="/" class="logo">
+                        <img src="/bilder/logo.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg">
+                    </a>
+
+                    <nav class="main-nav" id="main-nav">
+                        <ul class="nav-list">
+
+                            <li class="nav-item nav-item--has-dropdown">
+                                <a href="#" class="nav-link button-74" id="mobile-products-trigger">Produkte <i class="fas fa-chevron-down fa-xs"></i></a>
+                                <div class="dropdown" id="product-dropdown-container"></div>
+                                <ul class="mobile-submenu-list">
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="adults-products-trigger" data-category="adults"><i class="	fa fa-long-arrow-right"></i> Für Schulkinder & Erwachsene</a></li>
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="kids-products-trigger" data-category="kids"><i class="	fa fa-long-arrow-right"></i> Für Kindergärten</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-item--contact"><a href="/kontakt.html" class="nav-link">Kontakt</a></li>
+                            <li class="nav-item nav-item--imprint"><a href="/impressum.html" class="nav-link">Impressum & Datenschutz</a></li>
+                            <!-- <li class="nav-item nav-item--button"><a href="miteinander-im-freien.pdf" class="nav-link-button"><i class="fa-solid fa-download"></i> Broschüre</a></li> -->
+
+
+                            <li class="nav-item nav-item--button nav-item--has-pdf-dropdown">
+              <a href="#" class="nav-link-button">
+                  <i class="fa-solid fa-download"></i> Broschüren
+              </a>
+              <ul class="pdf-dropdown-menu">
+                <li>
+                    <a href="/bildung-im-freien.pdf">
+                        <i class="fa-solid fa-download"></i> Bildung im Freien
+                    </a>
+                </li>
+                  <li>
+                      <a href="/miteinander-im-freien.pdf">
+                          <i class="fa-solid fa-download"></i> Miteinander im Freien
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/bambini-collection.pdf">
+                          <i class="fa-solid fa-download"></i> Bambini Collection
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/sonnenschirme.pdf">
+                          <i class="fa-solid fa-download"></i> Sonnenschirme
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+                        </ul>
+                    </nav>
+
+                    <div id="mobile-submenu-container"></div>
+
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section id="product-page">
+                    <div class="container">
+                        <div class="product-page-heading">
+                            <h1 class="product-name">TEAMER-BAMBINI</h1>
+                            <span class="tagline">Der robuste Gitter-Klassiker für jede Jahreszeit</span>
+                        </div>
+                        <div class="top-row-grid">
+                            <div class="product-details">
+                                <div class="product-description">
+                                    <p>
+                                        Einladender Sitzkomfort für draußen und immer verfügbar! Verzinkte Drahtgitterflächen mit einer besonders starken Beschichtung von 350 μ sorgen für ein besonders langes Leben und dafür, dass die Sitz-
+                                        und Tischflächen sich nicht so stark erhitzen wie einfach beschichtete Metalloberflächen. Die Gestelle sind feuerverzinkt. Die sehr glatte und porenfreie Oberfläche aus Polyamid-Rilsan verschmutzt
+                                        kaum und ist einfach zu reinigen.
+                                    </p>
+                                    <p>Die Lieferung erfolgt teilzerlegt zur einfachen Selbstmontage.</p>
+                                    <ul>
+                                        <li>extrem belastbar</li>
+                                        <li>für einen einladenden Außenbereich</li>
+                                        <li>robust und langlebig</li>
+                                        <li>extrem belastbar durch Rasterverdichtung und verschweißte Drahtgitterbolzenauflage</li>
+                                        <li>Thermoeffekt für angenehmes Sitzen zu jeder Jahreszeit</li>
+                                        <li>wasserabweisend und schnelltrocknend</li>
+                                        <li>Reinigungseffekt bei Regen</li>
+                                        <li>10 Jahre Anti-Rost-Garantie auf die feuerverzinkten Gestelle</li>
+                                        <li>Tischplatte: Drahtgitter</li>
+                                        <li>Sitzfläche: Drahtgitter (Raster 15 x 15 mm, Drahtstärke 3 mm) und Rundrohr (Ø 38 mm).</li>
+                                        <li>Bodenkontakt: mobil. Eine feste Verbindung mit dem Untergrund ist jedoch möglich. Die Tisch-Sitz-Kombination ist vorgebohrt (Boden-Befestigungsmaterial ist nicht enthalten).</li>
+                                        <li>Fußgestell: feuerverzinkt</li>
+                                        <li>
+                                            Um die Stahlmöbel optimal zu schützen, sind die Drahtgitter-Oberflächen (RAL 9006 und DB 703) serienmäßig mit einer Anti-Graffiti-Beschichtung versehen. Dadurch können Harze, Lacke, Klebstoffe und
+                                            sonstiger Schmutz mit biologisch abbaubarem Farbentferner einfach abgewischt werden.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Dynamic product description will be populated here -->
+
+                                <div class="accordion-container">
+                                    <!-- ACCORDION ITEMS WILL BE DYNAMICALLY GENERATED HERE -->
+                                </div>
+                            </div>
+                            <div class="gallery-section">
+                                <div class="product-image-collage" id="image-collage-container">
+                                  <div class="collage-image-wrapper"><img src="bilder/teamer-bambini-4.jpg" alt="TEAMER-BAMBINI" /></div>
+
+                                    <div class="collage-image-wrapper"><img src="bilder/teamer-bambini-1.jpg" alt="TEAMER-BAMBINI" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/teamer-bambini-2.jpg" alt="TEAMER-BAMBINI" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/teamer-bambini-3.jpg" alt="TEAMER-BAMBINI" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="container">
+                    
+                    <div class="footer-links"><a href="/kontakt.html">Kontakt</a><a href="/impressum.html">Impressum & Datenschutz</a></div>
+                    <p class="copyright">&copy; 2025 Martin Brauns | Alle Rechte vorbehalten.</p>
+                </div>
+            </footer>
+
+            <div id="image-modal" class="image-modal"><span class="modal-close">&times;</span><img class="image-modal-content" id="modal-image" /></div>
+
+            <!-- Unsere JS-Dateien -->
+            <script src="/js/product-page.js"></script>
+            <script type="module" src="/js/configurator.js"></script>
+            <script src="/js/menu.js"></script>
+        </div>
+        <!-- End of page-wrapper -->
+    </body>
+</html>

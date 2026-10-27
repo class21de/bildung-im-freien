@@ -1,0 +1,41 @@
+{
+  "productName": "RELAX",
+  "tagline": "Die Komfortzone für frische Gedanken",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "Cortenoptik", "color": "farben/cortenoptik.jpg"},
+      {"name": "Grau", "color": "farben/grau.jpg"},
+      {"name": "RAL 3004", "color": "farben/ral-3004.jpg"},
+      {"name": "RAL 3020", "color": "farben/ral-3020.jpg"},
+      {"name": "RAL 5010", "color": "farben/ral-5010.jpg"},
+      {"name": "RAL 6005", "color": "farben/ral-6005.jpg"},
+      {"name": "RAL 7044", "color": "farben/ral-7044.jpg"},
+      {"name": "RAL 8017", "color": "farben/ral-8017.jpg"},
+      {"name": "RAL 9005", "color": "farben/ral-9005.jpg"},
+      {"name": "RAL 9010", "color": "farben/ral-9010.jpg"}
+    ],
+    "seat": [
+      {"name": "Eichenholz - Lasur helle Eiche", "color": "farben/eiche-hell.jpg"},
+      {"name": "Eichenholz - Tönung Mahagoni", "color": "farben/eiche-mahagony.jpg"},
+      {"name": "Recycling-Kunststoff", "color": "farben/kunstoff.jpg"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "RELAX 3-Sitzer", "svg": "piktogramme/relax-2-sitzer.svg", "modelFile": "modelle/relax-3-sitzer.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 1.55}},
+    {"name": "RELAX 2-Sitzer", "svg": "piktogramme/relax-2-sitzer.svg", "modelFile": "modelle/relax-2-sitzer.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 1.75}},
+    {"name": "RELAX 1-Sitzer", "svg": "piktogramme/relax-1-sitzer.svg", "modelFile": "modelle/relax-1-sitzer.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.02, 0.00], "viewAngle": 29, "zoom": 1.95}}
+
+  ],
+  "measurements": {
+  "type": "images",
+  "images": [
+    "piktogramme/relax-1-sitzer-bemassung.svg",
+    "piktogramme/relax-2-sitzer-bemassung.svg",
+    "piktogramme/relax-3-sitzer-bemassung.svg"
+  ]
+},
+
+  "has3D": true,
+  "environmentHdr": "/materialien/environment.hdr"
+}

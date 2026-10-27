@@ -1,0 +1,33 @@
+{
+  "productName": "OASA",
+  "tagline": "Oasenmodule für einen angenehmen Lebensraum",
+
+  "colorOptions": {
+    "frame": [
+      {"name": "Cortenoptik", "color": "farben/cortenoptik.jpg"},
+      {"name": "Grau", "color": "farben/grau.jpg"},
+      {"name": "RAL 3004", "color": "farben/ral-3004.jpg"},
+      {"name": "RAL 3020", "color": "farben/ral-3020.jpg"},
+      {"name": "RAL 5010", "color": "farben/ral-5010.jpg"},
+      {"name": "RAL 6005", "color": "farben/ral-6005.jpg"},
+      {"name": "RAL 7044", "color": "farben/ral-7044.jpg"},
+      {"name": "RAL 8017", "color": "farben/ral-8017.jpg"},
+      {"name": "RAL 9005", "color": "farben/ral-9005.jpg"},
+      {"name": "RAL 9010", "color": "farben/ral-9010.jpg"}
+    ]
+  },
+  "modelVariants": [
+    {"name": "OASA Pflanzbehälter", "svg": "piktogramme/oasa-pflanzbehaelter.svg", "modelFile": "modelle/oasa-pflanzbehaelter.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 2.8}},
+    {"name": "OASA Sitzbank", "svg": "piktogramme/oasa-sitzbank.svg", "modelFile": "modelle/oasa-sitzbank.glb", "settings": {"camPos": [-0.90, 1.26, 3.22], "target": [0.00, -0.0, 0.00], "viewAngle": 29, "zoom": 2.8}}
+  ],
+  "measurements": {
+  "type": "images",
+  "images": [
+    "piktogramme/oasa-pflanzenbehaelter-bemassung.svg",
+    "piktogramme/oasa-sitzbank-bemassung.svg"
+  ]
+},
+
+  "has3D": true,
+  "environmentHdr": "/materialien/environment.hdr"
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Miteinander im Freien</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <style>
+        .imprint-section {
+            padding: 5rem 0;
+            background-color: var(--color-background);
+        }
+        .imprint-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .imprint-container h1 {
+            color: var(--color-text);
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        .content-card {
+            background: var(--color-white);
+            padding: 20px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-subtle);
+            text-align: left;
+        }
+        .content-card h2 {
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .content-card h3 {
+            text-align: left;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .content-card p, .content-card ul {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .contact-details p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="bilder/logo.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg">
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+
+                    <li class="nav-item nav-item--has-dropdown">
+                        <a href="#" class="nav-link button-74" id="mobile-products-trigger">Produkte <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown" id="product-dropdown-container"></div>
+                        <ul class="mobile-submenu-list">
+                            <li><a href="#" class="mobile-submenu-category button-74" id="adults-products-trigger" data-category="adults"><i class="	fa fa-long-arrow-right"></i> Für Schulkinder & Erwachsene</a></li>
+                            <li><a href="#" class="mobile-submenu-category button-74" id="kids-products-trigger" data-category="kids"><i class="	fa fa-long-arrow-right"></i> Für Kindergärten</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item nav-item--contact"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                    <li class="nav-item nav-item--imprint"><a href="impressum.html" class="nav-link">Impressum & Datenschutz</a></li>
+                    <!-- <li class="nav-item nav-item--button"><a href="miteinander-im-freien.pdf" class="nav-link-button"><i class="fa-solid fa-download"></i> Broschüre</a></li> -->
+
+
+                    <li class="nav-item nav-item--button nav-item--has-pdf-dropdown">
+      <a href="#" class="nav-link-button">
+          <i class="fa-solid fa-download"></i> Broschüren
+      </a>
+      <ul class="pdf-dropdown-menu">
+        <li>
+            <a href="bildung-im-freien.pdf">
+                <i class="fa-solid fa-download"></i> Bildung im Freien
+            </a>
+        </li>
+          <li>
+              <a href="miteinander-im-freien.pdf">
+                  <i class="fa-solid fa-download"></i> Miteinander im Freien
+              </a>
+          </li>
+          <li>
+              <a href="bambini-collection.pdf">
+                  <i class="fa-solid fa-download"></i> Bambini Collection
+              </a>
+          </li>
+          <li>
+              <a href="sonnenschirme.pdf">
+                  <i class="fa-solid fa-download"></i> Sonnenschirme
+              </a>
+          </li>
+      </ul>
+  </li>
+                </ul>
+            </nav>
+
+            <div id="mobile-submenu-container"></div>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="imprint-section">
+            <div class="imprint-container">
+                <h1>Impressum & Datenschutz</h1>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2>Impressum</h2>
+                        <div class="contact-details">
+                            <p>Martin Brauns | Bildung einrichten.<br>
+                            Bördeler Weg 12<br>
+                            37127 Dransfeld</p>
+
+                            <p><strong>Tel.:</strong> 0 55 02 – 99 99 50<br>
+                            <strong>Fax:</strong> 0 55 02 – 99 99 51</p>
+
+                            <p><strong>Mail:</strong> outdoor@pro-einrichten.de</p>
+                            <p><strong>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:</strong> DE812018250</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2>Haftungsausschluss (Disclaimer)</h2>
+                        <h3>Haftung für Inhalte:</h3>
+                        <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+  <p>Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.</p>
+  <p>Eine Haftung für fremde Inhalte ist grundsätzlich erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Sobald uns entsprechende Rechtsverletzungen bekannt werden, werden wir die betreffenden Inhalte unverzüglich entfernen.</p>
+                        <h3>Haftung für Links:</h3>
+                        <p>Unsere Website enthält gegebenenfalls Links zu externen Websites Dritter. Auf deren Inhalte haben wir keinen Einfluss und können daher keine Gewähr für diese fremden Inhalte übernehmen.</p>
+
+<p>Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar.</p>
+
+<p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte für eine Rechtsverletzung nicht zumutbar. Sollten uns Rechtsverletzungen bekannt werden, werden wir entsprechende externe Links unverzüglich entfernen.</p>
+                        <h3>Urheberrecht:</h3>
+                        <p>Die auf dieser Website veröffentlichten Inhalte und Werke, die von den Seitenbetreibern erstellt wurden, unterliegen dem deutschen Urheberrecht.</p>
+
+<p>Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Urhebers bzw. Erstellers.</p>
+
+<p>Downloads und Kopien dieser Website sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+
+<p>Soweit Inhalte auf dieser Website nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet und entsprechende Inhalte als solche gekennzeichnet.</p>
+
+<p>Sollten Sie dennoch auf eine mögliche Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir die betreffenden Inhalte unverzüglich prüfen und gegebenenfalls entfernen.</p>
+<h3>Datenschutz</h3>
+<p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzbestimmungen, insbesondere der Datenschutz-Grundverordnung (DSGVO).</p>
+
+<p>Beim Besuch unserer Website werden durch den Webserver technisch notwendige Daten wie IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten, Browsertyp und Betriebssystem verarbeitet. Diese Daten dienen ausschließlich der technischen Bereitstellung, Sicherheit und Verbesserung unserer Website und werden nicht für Werbezwecke verwendet.</p>
+
+<p>Wenn Sie uns per E-Mail oder über ein Kontaktformular kontaktieren, werden die von Ihnen übermittelten personenbezogenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage und für die damit verbundene Kommunikation verwendet. Eine Weitergabe an Dritte erfolgt grundsätzlich nicht, sofern keine gesetzliche Verpflichtung dazu besteht oder dies zur Bearbeitung Ihrer Anfrage erforderlich ist.</p>
+
+<p>Wir verwenden auf dieser Website kein Google Analytics und keine vergleichbaren Analyse- oder Trackingdienste.</p>
+
+<p>Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten sowie auf Berichtigung, Löschung oder Einschränkung der Verarbeitung. Darüber hinaus haben Sie, soweit die gesetzlichen Voraussetzungen erfüllt sind, das Recht auf Widerspruch gegen die Verarbeitung und auf Datenübertragbarkeit.</p>
+
+<h3>Keine Abmahnung ohne vorherigen Kontakt</h3>
+<p>Sollten Sie der Auffassung sein, dass Inhalte oder Darstellungen auf dieser Website Rechte Dritter oder gesetzliche Vorschriften verletzen, bitten wir Sie, uns zunächst direkt zu kontaktieren. Wir werden einen berechtigten Hinweis unverzüglich prüfen und gegebenenfalls Abhilfe schaffen.</p>
+
+<p>Die Einschaltung eines Rechtsbeistands zur kostenpflichtigen Abmahnung entspricht nicht unserem Interesse. Unberechtigte oder nicht nachvollziehbare Abmahnungen bzw. deren Kosten können zurückgewiesen werden.</p>
+<h3>Widerspruch gegen die Nutzung von Kontaktdaten für Werbung</h3>
+<p>Der Nutzung der im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen.</p>
+
+<p>Die Betreiber der Website behalten sich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, insbesondere durch Spam-E-Mails, vor.</p>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="https://bildung-im-freien.de/wp-content/themes/bildung-im-freien/bilder/Wir-richten-Bildung-ein.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg">
+            </a>
+            <div class="footer-links">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum & Datenschutz</a>
+            </div>
+            <p class="copyright">&copy; 2025 Martin Brauns | Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+  </div>
+</body>
+</html>

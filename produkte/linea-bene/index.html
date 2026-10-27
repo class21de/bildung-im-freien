@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LINEA-BENE</title>
+
+        <!-- Externe Ressourcen -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Sen:wght@400..800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+        <!-- Import Map für Three.js -->
+        <script type="importmap">
+            { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+        </script>
+
+        <!-- Unsere CSS-Dateien mit absoluten Pfaden -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/menu.css" />
+        <link rel="stylesheet" href="/css/product.css" />
+    </head>
+    <body lang="de">
+        <div class="page-wrapper">
+            <div class="custom-tooltip">
+                <div class="tooltip-swatch"></div>
+                <p class="tooltip-name"></p>
+            </div>
+
+            <header class="main-header">
+                <div class="container header-container">
+                    <a href="/" class="logo">
+                        <img src="/bilder/logo.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg">
+                    </a>
+
+                    <nav class="main-nav" id="main-nav">
+                        <ul class="nav-list">
+
+                            <li class="nav-item nav-item--has-dropdown">
+                                <a href="#" class="nav-link button-74" id="mobile-products-trigger">Produkte <i class="fas fa-chevron-down fa-xs"></i></a>
+                                <div class="dropdown" id="product-dropdown-container"></div>
+                                <ul class="mobile-submenu-list">
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="adults-products-trigger" data-category="adults"><i class="	fa fa-long-arrow-right"></i> Für Schulkinder & Erwachsene</a></li>
+                                    <li><a href="#" class="mobile-submenu-category button-74" id="kids-products-trigger" data-category="kids"><i class="	fa fa-long-arrow-right"></i> Für Kindergärten</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item nav-item--contact"><a href="/kontakt.html" class="nav-link">Kontakt</a></li>
+                            <li class="nav-item nav-item--imprint"><a href="/impressum.html" class="nav-link">Impressum & Datenschutz</a></li>
+                            <!-- <li class="nav-item nav-item--button"><a href="miteinander-im-freien.pdf" class="nav-link-button"><i class="fa-solid fa-download"></i> Broschüre</a></li> -->
+
+
+                            <li class="nav-item nav-item--button nav-item--has-pdf-dropdown">
+              <a href="#" class="nav-link-button">
+                  <i class="fa-solid fa-download"></i> Broschüren
+              </a>
+              <ul class="pdf-dropdown-menu">
+                <li>
+                    <a href="/bildung-im-freien.pdf">
+                        <i class="fa-solid fa-download"></i> Bildung im Freien
+                    </a>
+                </li>
+                  <li>
+                      <a href="/miteinander-im-freien.pdf">
+                          <i class="fa-solid fa-download"></i> Miteinander im Freien
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/bambini-collection.pdf">
+                          <i class="fa-solid fa-download"></i> Bambini Collection
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/sonnenschirme.pdf">
+                          <i class="fa-solid fa-download"></i> Sonnenschirme
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+                        </ul>
+                    </nav>
+
+                    <div id="mobile-submenu-container"></div>
+
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section id="product-page">
+                    <div class="container">
+                        <div class="product-page-heading">
+                            <h1 class="product-name">LINEA-BENE</h1>
+                            <span class="tagline">Komfort im Freien</span>
+                        </div>
+                        <div class="top-row-grid">
+                            <div class="product-details">
+                                <div class="product-description">
+                                    <p>
+                                        Orte der Ruhe sind wichtig. Sie helfen uns, zu entspannen und neue Kraft zu schöpfen. Unsere Bank <span class="product-name-inline">LINEA-BENE</span> bietet die Sitzplätze dafür – einen Ort, an dem wir zusammenkommen, innehalten und den guten Sitzkomfort genießen können. Ergänzt wird die Produktlinie durch den passenden <span class="product-name-inline">LINEA-BENE</span> Tisch, der das Ensemble zu einem funktionalen und gestalterisch stimmigen Treffpunkt im Außenraum vervollständigt.
+                                    </p>
+                                    <p>
+                                      Das Gestell wird aus gebürstetem Edelstahl gefertigt. Die Sitzflächen und Rückenlehnen der Bank sowie die Tischfläche des <span class="product-name-inline">LINEA-BENE</span> Tisches bestehen aus hochwertigem Robinienholz. Robinie ist eines der härtesten und widerstandsfähigsten Hölzer für den Außenbereich. Sie überzeugt durch ihre natürliche Ausstrahlung und trotzt Wind und Wetter über viele Jahre hinweg. Die Kombination aus kühlem Edelstahl und warmem Holz fügt sich sowohl in urbanen Umgebungen als auch in naturnahen Parkanlagen harmonisch ein.
+                                    </p>
+                                      <p>
+                                        Um unterschiedlichen Anforderungen gerecht zu werden, ist die Bank in vier Varianten erhältlich:
+                                      </p>
+                                      <ul>
+                                          <li><span class="product-name-inline">LINEA-BENE 150</span>: 150 cm Länge, wahlweise mit oder ohne Rückenlehne.</li>
+                                          <li><span class="product-name-inline">LINEA-BENE 180</span>: 180 cm Länge, wahlweise mit oder ohne Rückenlehne.</li>
+                                      </ul>
+                                      <p>
+                                        Der <span class="product-name-inline">LINEA-BENE</span> Tisch ist in den Längen 150 cm und 180 cm erhältlich und in Gestaltung und Materialität exakt auf die Bänke abgestimmt.
+                                      </p>
+                                      <p>
+                                        Die Bänke sind so konstruiert, dass Sie miteinander verbunden werden können und dabei ein harmonisches Gesamtbild ergeben.
+                                      </p>
+                                      <p>
+                                        <span class="product-name-inline">LINEA-BENE</span> wurde ästhetisch anspruchsvoll gestaltet, wird qualitativ hochwertig ausgeführt, und zeichnet sich durch ihre lang anhaltende Beständigkeit aus.
+
+                                      </p>
+                                </div>
+
+                                <!-- Dynamic product description will be populated here -->
+
+                                <div class="accordion-container">
+                                    <!-- ACCORDION ITEMS WILL BE DYNAMICALLY GENERATED HERE -->
+                                </div>
+                            </div>
+                            <div class="gallery-section">
+                                <div class="product-image-collage" id="image-collage-container">
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-1.jpg" alt="LINEA-BENE" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-2.jpg" alt="LINEA-BENE" /></div>
+                                      <div class="collage-image-wrapper"><img src="bilder/linea-bene-7.jpg" alt="LINEA-BENE" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-3.jpg" alt="LINEA-BENE" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-4.jpg" alt="LINEA-BENE" /></div>
+
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-8.jpg" alt="LINEA-BENE" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-9.jpg" alt="LINEA-BENE" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-5.jpg" alt="LINEA-BENE" /></div>
+                                    <div class="collage-image-wrapper"><img src="bilder/linea-bene-6.jpg" alt="LINEA-BENE" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <div class="container">
+                    
+                    <div class="footer-links"><a href="/kontakt.html">Kontakt</a><a href="/impressum.html">Impressum & Datenschutz</a></div>
+                    <p class="copyright">&copy; 2025 Martin Brauns | Alle Rechte vorbehalten.</p>
+                </div>
+            </footer>
+
+            <div id="image-modal" class="image-modal"><span class="modal-close">&times;</span><img class="image-modal-content" id="modal-image" /></div>
+
+            <!-- Unsere JS-Dateien -->
+            <script src="/js/product-page.js"></script>
+            <script type="module" src="/js/configurator.js"></script>
+            <script src="/js/menu.js"></script>
+        </div>
+        <!-- End of page-wrapper -->
+    </body>
+</html>

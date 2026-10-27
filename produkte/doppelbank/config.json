@@ -1,0 +1,24 @@
+{
+  "productName": "DOPPELBANK",
+  "tagline": "Ein Bankmodul mit zwei Sitzzonen",
+
+  "measurements": {
+    "type": "table",
+    "sketch":false,
+    "variants": [
+      {"name": "DOPPELBANK", "sketch": "piktogramme/doppelbank.svg", "measurements": {"Bank": {"L/Ø": "150", "B": "44", "H": "90", "SH": "45"}, "Stellfläche": {"L/Ø": "150", "B": "155", "H": "-", "SH": "-"}}, "weight": "ca. 158 kg"}
+    ]
+  },
+
+  "woodInfo": [
+    {"name": "Nordisches Kiefernholz", "image": "/produkte/zubehoer/nordisches-kiefernholz.jpg", "description": "Es wurde mit Silikatsand imprägniert und weist dadurch eine besonders lange Haltbarkeit auf. Es bedarf keiner Oberflächenbehandlung und hält lange Zeit der Witterung stand. Ein deutlicher Vorteil gegenüber dem bislang verwendeten Lärchenholz."}
+  ],
+  "stretchable":{
+    "exists":false,
+    "accessories":false,
+    "configurations":false,
+    "measurements":false,
+    "wood":false
+  },
+  "has3D": false
+}
