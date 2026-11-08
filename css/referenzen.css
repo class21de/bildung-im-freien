@@ -1,0 +1,225 @@
+/* /css/referenzen.css */
+.references-page {
+    padding: 65px 0 30px;
+}
+
+.references-page h1 {
+    color: var(--color-text);
+    text-align: center;
+    border-bottom: 2px solid var(--color-primary);
+    width: fit-content;
+    margin: 0 auto 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.reference-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: var(--color-white);
+    box-shadow: var(--shadow-subtle);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reference-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+}
+
+.reference-open {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-bottom: var(--border-image);
+    background: none;
+    cursor: zoom-in;
+    overflow: hidden;
+}
+
+.reference-open img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.reference-card:hover .reference-open img {
+    transform: scale(1.05);
+}
+
+.reference-count {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: var(--color-text);
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.reference-info {
+    padding: 18px 20px 20px;
+}
+
+.reference-place {
+    display: block;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.reference-info h2 {
+    margin: 0 0 6px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.reference-info p {
+    margin-top: 8px;
+}
+
+.reference-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+}
+
+.reference-products a {
+    text-decoration: none;
+}
+
+.reference-products a:hover .product-name-inline {
+    color: var(--color-primary);
+    text-shadow: 0.3px 0.3px 0 var(--color-primary);
+}
+
+.references-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px 24px;
+    margin-top: 45px;
+    font-weight: 500;
+}
+
+/* Bilderansicht */
+.reference-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.reference-modal[hidden] {
+    display: none;
+}
+
+.reference-modal figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+}
+
+.reference-modal img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 110px);
+    border-radius: var(--border-radius);
+}
+
+.reference-modal figcaption {
+    margin-top: 12px;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.reference-modal-close,
+.reference-modal-nav {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    color: #f1f1f1;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reference-modal-close:hover,
+.reference-modal-nav:hover {
+    background: var(--color-primary);
+}
+
+.reference-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    z-index: 1;
+}
+
+@media (max-width: 1240px) {
+    .references-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .references-page {
+        padding-top: 35px;
+    }
+
+    .references-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .reference-modal {
+        gap: 0;
+        padding: 12px;
+    }
+
+    .reference-modal-nav {
+        position: absolute;
+        bottom: 16px;
+    }
+
+    .reference-modal-prev {
+        left: calc(50% - 60px);
+    }
+
+    .reference-modal-next {
+        right: calc(50% - 60px);
+    }
+
+    .reference-modal img {
+        max-height: calc(100vh - 170px);
+    }
+
+    .reference-modal figure {
+        margin-bottom: 60px;
+    }
+}

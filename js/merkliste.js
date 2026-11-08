@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const STORAGE_KEY = 'bildung-im-freien-merkliste';
+  let formRenderedAt = Date.now();
   const getItems = () => {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
     catch (_) { return []; }
@@ -56,9 +57,9 @@
     if (!items.some(item => item.id === product.id)) {
       items.push(product);
       saveItems(items);
-      showNotice('Das Produkt wurde Ihrer Merkliste hinzugefügt.');
+      showNotice('Das Produkt wurde Ihrer Projektanfrage hinzugefügt.');
     } else {
-      showNotice('Dieses Produkt ist bereits in Ihrer Merkliste.');
+      showNotice('Dieses Produkt ist bereits in Ihrer Projektanfrage.');
     }
     updateCount();
     document.dispatchEvent(new Event('wishlist:changed'));
@@ -66,17 +67,46 @@
 
   function addProductButton() {
     if (!document.querySelector('#product-page') || document.querySelector('.wishlist-add-area')) return;
+    const hasConfigurator = Boolean(document.querySelector('#configurator-container'));
     const area = document.createElement('section');
     area.className = 'wishlist-add-area';
-    area.innerHTML = '<button type="button" class="wishlist-add-button"><i class="fa-solid fa-star"></i> Merkliste oder auch Ihre (Preis-)Anfrage</button><p class="wishlist-config-hint" hidden>Ihre aktuelle Konfiguration wird mit der Anfrage gespeichert und übermittelt. Wenn Sie noch unsicher sind, schreiben Sie Ihren Wunsch einfach in die Anmerkungen.</p>';
+    area.id = 'projektanfrage';
+    area.innerHTML = `<h2>Preis-/Projektanfrage</h2>
+      <ol class="inquiry-steps">
+        <li><span>1</span>${hasConfigurator ? 'Modell wählen' : 'Produkt auswählen'}</li>
+        <li><span>2</span>Zur Projektanfrage hinzufügen</li>
+        <li><span>3</span>Anfrage abschicken</li>
+      </ol>
+      <div class="inquiry-actions">
+        <button type="button" class="wishlist-add-button"><i class="fa-solid fa-clipboard-list"></i> Zu meiner Projektanfrage hinzufügen</button>
+        <a class="nav-link-button nav-link-button--outline inquiry-continue" href="/projektanfrage.html" hidden>Meine Projektanfrage <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <p class="wishlist-config-hint" hidden>Ihre aktuelle Konfiguration wird mit der Anfrage gespeichert und übermittelt. Wenn Sie noch unsicher sind, schreiben Sie Ihren Wunsch einfach in die Anmerkungen.</p>
+      <p class="inquiry-direct">Tel: <a href="tel:+495502999950">05502 – 99 99 50</a> · <a href="mailto:info@bildung-einrichten.de">info@bildung-einrichten.de</a></p>`;
     const target = document.querySelector('.bottom-row-grid') || document.querySelector('.product-description .pdf-link-list') || document.querySelector('.accordion-container');
     if (target?.classList.contains('pdf-link-list')) target.after(area);
     else if (target) target.after(area);
     else document.querySelector('#product-page .container')?.append(area);
     area.querySelector('button').addEventListener('click', () => {
       addCurrentProduct();
-      if (document.querySelector('#configurator-container')) area.querySelector('.wishlist-config-hint').hidden = false;
+      area.querySelector('.inquiry-continue').hidden = false;
+      if (hasConfigurator) area.querySelector('.wishlist-config-hint').hidden = false;
     });
+
+    // Direkter Sprung vom Seitenanfang, weil die Anfrage weit unten auf der Seite steht.
+    const heading = document.querySelector('.product-page-heading');
+    if (heading) {
+      const jump = document.createElement('a');
+      jump.className = 'nav-link-button inquiry-jump';
+      jump.href = '#projektanfrage';
+      jump.innerHTML = '<i class="fa-solid fa-clipboard-list"></i> Meine Projektanfrage';
+      jump.addEventListener('click', event => {
+        event.preventDefault();
+        (document.querySelector('.configurator-intro') || area).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      heading.classList.add('has-inquiry-jump');
+      heading.append(jump);
+    }
   }
 
   function itemCard(item, index) {
@@ -90,18 +120,21 @@
     const root = document.querySelector('#wishlist-content');
     if (!root) return;
     const items = getItems();
-    if (!items.length) {
-      root.innerHTML = '<h1>Merkliste oder auch Ihre (Preis-)Anfrage</h1><p class="wishlist-empty">Ihre Merkliste ist leer.</p>';
-      return;
-    }
-    root.innerHTML = `<h1>Merkliste oder auch Ihre (Preis-)Anfrage</h1><p class="wishlist-intro">Hinweis: Bitte geben Sie zu jedem Produkt die gewünschte Menge an.</p><div class="wishlist-items">${items.map(itemCard).join('')}</div><p class="wishlist-required-note">Felder mit * sind Pflichtfelder.</p><form id="wishlist-form" novalidate>
+    const selection = items.length
+      ? `<p class="wishlist-intro">Hinweis: Bitte geben Sie zu jedem Produkt die gewünschte Menge an.</p><div class="wishlist-items">${items.map(itemCard).join('')}</div>`
+      : '<div class="wishlist-empty-hint"><p>Noch keine Produkte ausgewählt.</p><a href="#" class="nav-link-button nav-link-button--outline" data-open-products>Produkte</a></div>';
+    const notesField = items.length
+      ? '<label>Anmerkungen und Hinweise<textarea name="notes" rows="7"></textarea></label>'
+      : '<label>Ihr Anliegen *<textarea name="notes" rows="7" required></textarea></label>';
+    root.innerHTML = `<h1>Meine Projektanfrage</h1>${selection}<div class="inquiry-layout"><div><p class="wishlist-required-note">Felder mit * sind Pflichtfelder.</p><form id="wishlist-form" novalidate><div class="form-hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <fieldset><legend>Wie möchten Sie angesprochen werden? *</legend><div class="salutation-options"><label><input type="radio" name="salutation" value="Frau"> Frau</label><label><input type="radio" name="salutation" value="Herr"> Herr</label><label style="max-width:300px;">Divers: <input type="text" name="salutation_other" aria-label="Andere Anrede"></label></div></fieldset>
       <div class="form-grid form-grid--names"><label style="max-width:80px">Titel<input type="text" name="title"></label><label style="max-width:255px">Vorname *<input type="text" name="first_name" required></label><label style="max-width:255px">Nachname *<input type="text" name="last_name" required></label></div>
       <label>Bildungseinrichtung oder Firmenname *<input type="text" name="company" required></label>
       <label style="max-width:400px">Straße und Hausnummer *<input type="text" name="street" required></label>
       <div class="form-grid form-grid--address"><label style="max-width:120px">Postleitzahl *<input type="text" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required></label><label style="max-width:400px">Ort *<input type="text" name="city" required></label></div>
       <div class="form-grid form-grid--contact"><label style="max-width:200px">Telefon *<input type="tel" name="phone" inputmode="numeric" pattern="[0-9]+" required></label><label style="max-width:400px">E-Mail-Adresse *<input type="email" name="email" required></label></div>
-      <label>Anmerkungen und Hinweise<textarea name="notes" rows="7"></textarea></label><p id="form-error" class="form-error" role="alert" hidden></p><button class="wishlist-submit" type="submit">Anfrage abschicken</button></form>`;
+      ${notesField}<p id="form-error" class="form-error" role="alert" hidden></p><button class="wishlist-submit" type="submit">Anfrage abschicken</button></form></div>
+      <aside class="inquiry-direct-card"><h2>Telefon &amp; E-Mail</h2><a href="tel:+495502999950"><i class="fas fa-phone-alt"></i> 05502 – 99 99 50</a><a href="mailto:info@bildung-einrichten.de"><i class="fas fa-envelope"></i> info@bildung-einrichten.de</a></aside></div>`;
 
     root.querySelectorAll('.wishlist-remove').forEach(button => button.addEventListener('click', () => {
       const newItems = getItems(); newItems.splice(Number(button.dataset.index), 1); saveItems(newItems); updateCount(); document.dispatchEvent(new Event('wishlist:changed')); renderWishlist();
@@ -110,6 +143,11 @@
       const newItems = getItems(); newItems[Number(input.dataset.index)].quantity = input.value; saveItems(newItems);
     }));
     root.querySelector('#wishlist-form').addEventListener('submit', sendRequest);
+    formRenderedAt = Date.now();
+    // Dieselben Längengrenzen wie in anfrage.php.
+    root.querySelectorAll('#wishlist-form input[type="text"], #wishlist-form input[type="tel"]').forEach(input => { if (input.maxLength < 0) input.maxLength = 200; });
+    root.querySelector('#wishlist-form input[type="email"]').maxLength = 254;
+    root.querySelector('#wishlist-form textarea').maxLength = 5000;
   }
 
   async function sendRequest(event) {
@@ -124,20 +162,25 @@
     else if (!(data.salutation || String(data.salutation_other || '').trim())) message = 'Bitte geben Sie an, wie wir Sie ansprechen dürfen.';
     else if (!/^\d{5}$/.test(data.zip || '')) message = 'Bitte geben Sie eine fünfstellige deutsche Postleitzahl ein.';
     else if (!/^\d+$/.test(data.phone || '')) message = 'Bitte geben Sie beim Telefon nur Ziffern ein.';
+    else if (items.length > 50) message = 'Bitte wählen Sie höchstens 50 Produkte aus.';
     else if (!quantitiesValid) message = 'Bitte geben Sie für jedes Produkt eine Menge zwischen 1 und 999 an.';
     if (message) { error.textContent = message; error.hidden = false; form.reportValidity(); return; }
     error.hidden = true;
     const submit = form.querySelector('[type="submit"]');
     submit.disabled = true; submit.textContent = 'Anfrage wird gesendet …';
     try {
-      const response = await fetch('/anfrage.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: data, items }) });
+      const response = await fetch('/anfrage.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: data, items, elapsed_ms: Date.now() - formRenderedAt }) });
       const result = await response.json();
-      if (!response.ok || !result.success) throw new Error(result.message || 'Versand nicht möglich');
+      if (!response.ok || !result.success) {
+        const failure = new Error(result.message || 'Versand nicht möglich');
+        failure.showToUser = response.status < 500 && Boolean(result.message);
+        throw failure;
+      }
       localStorage.removeItem(STORAGE_KEY); updateCount();
       document.dispatchEvent(new Event('wishlist:changed'));
       document.querySelector('#wishlist-content').innerHTML = '<h1>Vielen Dank für Ihre Anfrage.</h1><p class="wishlist-success">Ihre Anfrage wurde erfolgreich an uns gesendet. Wir melden uns schnellstmöglich bei Ihnen.</p>';
     } catch (err) {
-      error.textContent = 'Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt.';
+      error.textContent = err.showToUser ? err.message : 'Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt.';
       error.hidden = false; submit.disabled = false; submit.textContent = 'Anfrage abschicken';
     }
   }

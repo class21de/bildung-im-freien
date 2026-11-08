@@ -15,6 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
         animatedSections.forEach(section => observer.observe(section));
     }
 
+    // --- Bildergalerie im Abschnitt „Wer wir sind“ ---
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const track = carousel.querySelector('[data-carousel-track]');
+        const slideCount = track.children.length;
+        const current = () => Math.round(track.scrollLeft / track.clientWidth);
+        const goTo = index => track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' });
+
+        const dotsContainer = carousel.querySelector('[data-carousel-dots]');
+        const dots = Array.from({ length: slideCount }, (_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'about-carousel-dot';
+            dot.setAttribute('aria-label', `Bild ${index + 1}`);
+            dot.addEventListener('click', () => goTo(index));
+            dotsContainer.appendChild(dot);
+            return dot;
+        });
+
+        const updateDots = () => dots.forEach((dot, index) => dot.classList.toggle('is-active', index === current()));
+        carousel.querySelector('[data-carousel-prev]').addEventListener('click', () => goTo((current() - 1 + slideCount) % slideCount));
+        carousel.querySelector('[data-carousel-next]').addEventListener('click', () => goTo((current() + 1) % slideCount));
+        track.addEventListener('scroll', updateDots, { passive: true });
+        updateDots();
+    });
+
     // --- Hero Slider Logic ---
     const sliderData = [
         { title: 'KREIS-TEAM', image: 'bilder/kreis-team-hpl-granny-smith-orange_6.jpg', link:'/produkte/kreis-team/index.html' },
@@ -128,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('click', () => {
                 const newIndex = parseInt(item.dataset.index);
                 if (newIndex !== currentIndex) {
-                    stopAutoplay();
+                    stopAutoplay(false);
                     goToSlide(newIndex);
                     if(!isPaused) {
                         autoPlayInterval = setInterval(nextSlide, sliderDuration);
@@ -138,8 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         pauseBtn.addEventListener('click', () => { isPaused ? startAutoplay() : stopAutoplay(); });
-        sliderContainer.addEventListener('mouseenter', () => { if (!isPaused) stopAutoplay(false); });
-        sliderContainer.addEventListener('mouseleave', () => { if (!isPaused) startAutoplay(); });
         window.addEventListener('resize', adjustContainerHeight);
 
         startAutoplay();

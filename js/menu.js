@@ -33,25 +33,17 @@
 
 document.addEventListener('DOMContentLoaded', async function() {
 
-  // Keep the wording consistent in the header and footer without maintaining
-  // dozens of duplicated navigation blocks by hand.
-  document.querySelectorAll('.nav-item--imprint a, .footer-links a').forEach(link => {
-    if (/^Impressum\s*&(?:amp;)?\s*Datenschutz$/i.test(link.textContent.trim())) link.textContent = 'Impressum';
-  });
-
-  // Inserted here instead of duplicated in every page header.
-  const pdfMenu = document.querySelector('.nav-item--has-pdf-dropdown');
-  if (pdfMenu && !document.querySelector('.nav-item--wishlist')) {
-    const wishlistItem = document.createElement('li');
-    wishlistItem.className = 'nav-item nav-item--button nav-item--wishlist';
-    wishlistItem.innerHTML = '<a href="/merkliste.html" class="nav-link-button"><i class="fa-solid fa-star"></i> Merkliste <span class="wishlist-count" aria-label="Produkte in der Merkliste">0</span></a>';
-    pdfMenu.before(wishlistItem);
-    try {
-      const savedItems = JSON.parse(localStorage.getItem('bildung-im-freien-merkliste')) || [];
-      const count = wishlistItem.querySelector('.wishlist-count');
-      count.textContent = savedItems.length;
-      count.hidden = savedItems.length === 0;
-    } catch (_) { /* Merkliste remains available if storage is unavailable. */ }
+  // Broschüren öffnen auch per Klick und Touch, auf Tablets gibt es keinen Hover.
+  const brochureMenu = document.querySelector('.nav-item--has-pdf-dropdown');
+  if (brochureMenu) {
+    brochureMenu.querySelector(':scope > a').addEventListener('click', event => {
+      event.preventDefault();
+      if (window.innerWidth > 1240) brochureMenu.classList.toggle('is-open');
+    });
+    brochureMenu.addEventListener('mouseleave', () => brochureMenu.classList.remove('is-open'));
+    document.addEventListener('click', event => {
+      if (!brochureMenu.contains(event.target)) brochureMenu.classList.remove('is-open');
+    });
   }
 
   // 1. Fetch BOTH JSON files
@@ -217,33 +209,47 @@ document.addEventListener('DOMContentLoaded', async function() {
 
       const productsTrigger = document.getElementById('mobile-products-trigger');
 
-      // Open on hover
-      productsTrigger.addEventListener('mouseenter', () => {
+      // Open on hover, close shortly after the mouse leaves the button and the panel.
+      let closeTimer;
+      let openedByClick = false;
+      const openOnHover = () => {
+          clearTimeout(closeTimer);
           if (window.innerWidth > 1240) {
               productDropdownContainer.classList.add('is-open');
           }
-      });
+      };
+      const closeAfterLeaving = () => {
+          clearTimeout(closeTimer);
+          closeTimer = setTimeout(() => {
+              productDropdownContainer.classList.remove('is-open');
+              openedByClick = false;
+          }, 250);
+      };
 
-      productDropdownContainer.addEventListener('mouseenter', () => {
-          if (window.innerWidth > 1240) {
-              productDropdownContainer.classList.add('is-open');
-          }
-      });
+      productsTrigger.addEventListener('mouseenter', openOnHover);
+      productsTrigger.addEventListener('mouseleave', closeAfterLeaving);
+      productDropdownContainer.addEventListener('mouseenter', openOnHover);
+      productDropdownContainer.addEventListener('mouseleave', closeAfterLeaving);
 
-      // Close on click on Produkte button
+      // A click opens the panel too (touch, keyboard). A second click closes it,
+      // but a click right after hovering must not close what the hover opened.
       productsTrigger.addEventListener('click', (e) => {
           if (window.innerWidth > 1240) {
               e.preventDefault();
-              productDropdownContainer.classList.remove('is-open');
+              clearTimeout(closeTimer);
+              const closeNow = productDropdownContainer.classList.contains('is-open') && openedByClick;
+              productDropdownContainer.classList.toggle('is-open', !closeNow);
+              openedByClick = !closeNow;
           }
       });
 
       // Close when clicking outside
       document.addEventListener('click', (e) => {
           if (window.innerWidth > 1240) {
-              const isClickInside = productDropdownContainer.contains(e.target) || productsTrigger.contains(e.target);
+              const isClickInside = productDropdownContainer.contains(e.target) || productsTrigger.contains(e.target) || e.target.closest('[data-open-products]');
               if (!isClickInside) {
                   productDropdownContainer.classList.remove('is-open');
+                  openedByClick = false;
               }
           }
       });
@@ -343,6 +349,17 @@ document.addEventListener('DOMContentLoaded', async function() {
       }
     });
   }
+
+  // „Produkte ansehen“-Schaltflächen öffnen die vollständige Produktübersicht.
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-open-products]')) return;
+    e.preventDefault();
+    if (window.innerWidth > 1240) {
+      productDropdownContainer?.classList.add('is-open');
+    } else if (hamburger && mainNav && !mainNav.classList.contains('is-active')) {
+      hamburger.click();
+    }
+  });
 
   // Adults Trigger
 if (mobileAdultsProductsTrigger) {

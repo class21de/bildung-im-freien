@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Statische Website von **bildung-im-freien.de** („Miteinander im Freien“, Kunde: Martin Brauns) – Outdoor-Möbel und Beschattungen für Schulen, Kitas, Universitäten, Kommunen, Architekten und Landschaftsplaner. Commit `b2d4f30` ist der übergebene Ausgangsstand für die Überarbeitung durch class21. Er ist **nicht identisch mit der Live-Seite**: Merkliste/`anfrage.php`, die Indoor-Kategorie und Footer-Korrekturen gibt es nur im Repo; `produkte/sonnen-eck/` gibt es nur live (Details und Sicherheitsbefunde: `docs/sicherheit.md`).
 
-Ziele der Überarbeitung laut Kunden-E-Mail: drei Logo-Alternativen, Hauptmenü neu gewichten (Produkte am wichtigsten), neue Menüpunkte „Über uns“ und „Referenzen“ (Inhalte liefert der Kunde nach; Fotos dafür vermutlich in `referenzbilder/`, siehe unten), Kontakt + Impressum zusammenfassen und ans Ende der Menüleiste, Breiten von Layout, Menü und Produktdarstellung prüfen, Startseite neu (was / für wen / warum wir), schneller Kontakt per Telefon, E-Mail und Projektanfrage (Button „Meine Projektanfrage“ im Hauptmenü und auf den Produktseiten). Der Kunde will **Designs erst als Bild abstimmen und dann programmieren** – also keine Umsetzung ohne freigegebenen Entwurf.
+Ziele der Überarbeitung laut Kunden-E-Mail: drei Logo-Alternativen, Hauptmenü neu gewichten (Produkte am wichtigsten), neue Menüpunkte „Über uns“ und „Referenzen“ (Inhalte liefert der Kunde nach; Fotos dafür vermutlich in `referenzbilder/`, siehe unten), Kontakt + Impressum zusammenfassen und ans Ende der Menüleiste, Breiten von Layout, Menü und Produktdarstellung prüfen, Startseite neu (was / für wen / warum wir), schneller Kontakt per Telefon, E-Mail und Projektanfrage (Button „Meine Projektanfrage“ im Hauptmenü und auf den Produktseiten). Der Kunde will **Designs erst als Bild abstimmen und dann programmieren** – also keine Veröffentlichung ohne freigegebenen Entwurf.
+
+Aufgabenstand mit Vorher-Nachher-Screenshots und offenen Punkten: `docs/aufgaben-2026-10-27.md`. Die Umsetzung liegt lokal als Entwurf vor, die Kundenfreigabe steht aus.
 
 ## Lokal starten
 
@@ -19,11 +21,11 @@ php -S localhost:8000            # nur nötig für anfrage.php (PHP ist lokal ni
 
 ## Architektur
 
-**Header und Footer liegen als Kopie in jeder HTML-Datei** (`index.html`, `kontakt.html`, `impressum.html`, `merkliste.html` und alle `produkte/*/index.html`). `js/menu.js` verändert diese Kopien zur Laufzeit:
+**Header und Footer liegen als Kopie in jeder HTML-Datei** (`index.html`, `kontakt.html`, `projektanfrage.html`, `ueber-uns.html`, `referenzen.html` und alle `produkte/*/index.html`; `impressum.html` ist nur noch eine Weiterleitung auf `/kontakt.html#impressum`). `js/menu.js` verändert diese Kopien zur Laufzeit:
 - baut das Produkt-Mega-Menü aus `js/products.json` (Schulkinder & Erwachsene) und `js/products-kindergarten.json` (Kindergärten), Einträge `{name, image, slug}` → Link `/produkte/<slug>/`;
 - hängt die Kategorie „Indoor“ an (Text + Bilder aus `bilder-indoor/`, verlinkt auf bildung-einrichten.de);
-- fügt den Button „Merkliste“ vor „Broschüren“ ein und lädt `js/merkliste.js` + `css/merkliste.css` auf jeder Seite;
-- benennt „Impressum & Datenschutz“ in „Impressum“ um und setzt das Copyright-Jahr.
+- lädt `js/merkliste.js` + `css/merkliste.css` auf jeder Seite und setzt das Copyright-Jahr;
+- öffnet über `[data-open-products]` die Produktübersicht (Desktop) bzw. das Menü (mobil).
 
 Wer die Navigation ändert, muss also entweder **alle** Header-Kopien gleich ändern oder es zentral in `menu.js` lösen. Der Mobile-Breakpoint für die Navigation ist 1240px – in CSS (`menu.css`) und in JS (`window.innerWidth > 1240`) gleichermaßen.
 
@@ -42,17 +44,19 @@ Zu jeder Produktseite gehört ein Paar aus „Seiten-Skript“ (Akkordeons, Farb
 
 Die Konfiguratoren färben Mesh-Objekte über deren Namen im GLB um (`Gestell`, `Sitzplatte`, `Tischplatte`, `Sonnentuch`, `HPL`, `Holz`). Das Attribut `data-material` eines Farbfelds muss zu den Material-Keys aus `config.json` passen. `product-page.js` greift ohne Prüfung auf `config.stretchable.exists` zu – Configs für dieses Skript brauchen das Feld `stretchable`. Auf Mobilgeräten (per User-Agent erkannt) wird ohne HDR-Umgebung und mit flacher Beleuchtung gerendert.
 
-**Merkliste / Preis- und Projektanfrage** (die Grundlage für die gewünschte „Projektanfrage“): `merkliste.js` setzt auf jeder `#product-page` den Button „Merkliste oder auch Ihre (Preis-)Anfrage“. Ein Klick speichert eine Momentaufnahme der aktuellen Konfiguration (gewähltes Modell + aktive Farbfelder) in `localStorage` unter `bildung-im-freien-merkliste`. `merkliste.html` zeigt Liste und Formular und schickt JSON per POST an `anfrage.php`, das eine HTML-Mail an `info@bildung-einrichten.de` versendet. Die Validierung (5-stellige PLZ, Telefon nur Ziffern, Menge 1–999) steht doppelt – in JS und in PHP – und muss beidseitig gleich gehalten werden.
+**Projektanfrage** (intern weiter `merkliste.*` und `wishlist-*`): `merkliste.js` setzt auf jeder `#product-page` den Bereich mit dem Button „Zu meiner Projektanfrage hinzufügen“ und oben den Sprung „Preis-/Projektanfrage stellen“. Ein Klick speichert eine Momentaufnahme der aktuellen Konfiguration (gewähltes Modell + aktive Farbfelder) in `localStorage` unter `bildung-im-freien-merkliste`. `projektanfrage.html` zeigt Liste und Formular und schickt JSON per POST an `anfrage.php`, das eine HTML-Mail an `info@bildung-einrichten.de` versendet. Das Formular geht auch ohne Produkte, dann ist das Anliegen Pflichtfeld. Die Validierung (5-stellige PLZ, Telefon nur Ziffern, Menge 1–999, Anliegen ohne Produkte, Längenlimits, höchstens 50 Produkte) steht doppelt – in JS und in PHP – und muss beidseitig gleich gehalten werden. Nur in PHP: Herkunfts- und Content-Type-Prüfung, Honeypot `website`, Mindestdauer `elapsed_ms`, 5 Mails pro Stunde und IP. Beim Testen `mail()` nie echt auslösen, Empfänger ist die Adresse des Kunden.
 
-**Startseite**: `index.html` + `js/startseite.js` (die Daten für den Hero-Slider stehen fest im JS) + `css/startseite.css`. Design-Tokens (Farben, Fonts Sen/Baumans) stehen in `:root` in `css/style.css`. `.container` ist 1240px breit; das Logo sitzt mit `position: absolute; left: -116px` außerhalb des Containers.
+**Referenzen**: `referenzen.html` + `js/referenzen.js` + `css/referenzen.css`. Die Projekte stehen in `js/referenzen.json` (`text` und `produkte` bleiben leer, bis der Kunde sie liefert), die verkleinerten Fotos unter `bilder/referenzen/<slug>/` (`01.jpg` …, `vorschau.jpg`).
+
+**Startseite**: `index.html` + `js/startseite.js` (die Daten für den Hero-Slider stehen fest im JS) + `css/startseite.css`. `ueber-uns.html` nutzt dieselbe CSS- und JS-Datei. Design-Tokens (Farben, Fonts Sen/Baumans, `--layout-width`) stehen in `:root` in `css/style.css`. `--layout-width` (1440px) gilt für `.container`, Startseiten-Hero, Kontaktseite und Produktübersicht; das Logo sitzt bündig am linken Rand des Inhalts.
 
 ## Referenzbilder (`referenzbilder/`)
 
-Vom Kunden geliefertes Fotomaterial (eingecheckt am 2026-10-28, ohne weitere Erklärung): Fotos von **ausgelieferten Möbeln vor Ort** in Schulen, Kitas und einer Hochschule. Vermutlich das Material für den neuen Menüpunkt **„Referenzen“**; es eignet sich aber auch für Produktgalerien und die neue Startseite. Wird nirgends im Code referenziert.
+Vom Kunden geliefertes Fotomaterial (eingecheckt am 2026-10-28, ohne weitere Erklärung): Fotos von **ausgelieferten Möbeln vor Ort** in Schulen, Kitas und einer Hochschule. Vermutlich das Material für den neuen Menüpunkt **„Referenzen“**; es eignet sich aber auch für Produktgalerien und die neue Startseite. Eine Auswahl ist verkleinert unter `bilder/referenzen/` eingebaut; der Ordner selbst wird nirgends im Code referenziert.
 
 - **Originaldateien, nicht webtauglich**: 150 Fotos, insgesamt ca. 1,9 GB. Meist Sony-Kamera mit 6000×4000 px und 10–23 MB pro JPG, dazu einige Smartphone-Fotos. Vor dem Einbau verkleinerte Kopien erzeugen (z. B. `vipsthumbnail` oder Pillow sind lokal vorhanden) und diese außerhalb von `referenzbilder/` ablegen. Den Ordner selbst **nicht auf den Webserver** hochladen. Dateien mit `bearbeitet` im Namen sind vom Kunden nachbearbeitete Versionen und den Originalen vorzuziehen. Die EXIF-Daten enthalten keine GPS-Daten.
 - **Ordnernamen**: `<Ort> - <Einrichtung>`, abgekürzt mit Kfz-Kennzeichen (B = Berlin, HH = Hamburg, M = München, OS = Osnabrück, SZ = Salzgitter). Die Umlaute sind durch einen Zip-Kodierungsfehler kaputt (`Ф` = ö, `Б` = ü, `с` = ß, z. B. `HБckelhoven` = Hückelhoven). Für Texte auf der Website die korrekte Schreibweise aus der Tabelle unten verwenden.
-- **Personen auf Fotos**: Jane-Addams `_DSC7499`/`_DSC7500` (Schüler im Hintergrund), Hameln `_DSC0869`/`_DSC0871`/`_DSC0872` (zwei Personen sitzend), Ostfalia `_DSC8639`–`_DSC8641` (Arbeiter), Weilrod `_DSC7470` (Person im Hintergrund). Vor einer Veröffentlichung Einwilligung klären oder die Personen unkenntlich machen.
+- **Personen auf Fotos**: Jane-Addams `_DSC7499`/`_DSC7500` (Schüler im Hintergrund), Hameln `_DSC0869`/`_DSC0871`/`_DSC0872` (zwei Personen sitzend), Ostfalia `_DSC8639`–`_DSC8641` (Arbeiter), Weilrod `_DSC7470` (Person im Hintergrund), Mülheim `P_20260423_140809` (Person am Tisch), Doveren `_DSC0134` (zwei Personen am Tor), Lauf `IMG_1523`/`IMG_1524`, Brachelen `_DSC0141`, Hilfarth `_DSC0137` (Personen hinter oder in Scheiben; in den Web-Kopien unkenntlich gemacht). Vor einer Veröffentlichung Einwilligung klären oder die Personen unkenntlich machen.
 - Einige Bilder aus diesen Serien sind schon Menübilder: `menu-bilder/kreis-team-…` ≈ Jane-Addams `_DSC7499`, Sonneta und LINEApro ≈ Ostfalia `_DSC8638`/`_DSC8641`.
 
 Inhalt (Produkte nach Augenschein zugeordnet; Aufnahmedatum laut EXIF):

@@ -13,6 +13,9 @@
     --border-radius: 10px;
     --paragraph-spacing: 1rem;
     --color-product: #1e2e65;
+    /* Gemeinsame Breite für Kopfzeile, Produktübersicht und Seiteninhalt. */
+    --layout-width: 1440px;
+    --border-image: 1px solid rgba(0, 0, 0, 0.14);
 }
 
 * {
@@ -38,12 +41,13 @@ body {
     font-family: var(--font-body);
     color: var(--color-text);
     background-color: var(--color-background);
-    line-height: 1.25;
+    line-height: 1.4;
     font-size: 18px;
+    overflow-wrap: break-word;
 }
 
 .container {
-    max-width: 1240px;
+    max-width: var(--layout-width);
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -61,7 +65,7 @@ h2 {
 }
 
 section {
-    padding: 30px 0;
+    padding: 56px 0;
     overflow: hidden;
 }
 
@@ -70,14 +74,25 @@ section {
     display: inline-flex; align-items: center; gap: 10px;
     background-color: var(--color-primary); color: var(--color-white);
     padding: 7px 18px; border-radius: 6px; text-decoration: none;
-    font-weight: 500; transition: background-color 0.3s ease;
+    font-weight: 500; transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: var(--shadow-subtle);
 }
 .nav-link-button:hover {
     background-color: var(--color-primary-dark);
     color: var(--color-white);
+    transform: translateY(-2px);
 }
 .nav-link-button i { font-size: 1em; }
+
+/* Zweitrangige Schaltfläche: sichtbar, aber schwächer als die gefüllte. */
+.nav-link-button--outline {
+    background-color: transparent;
+    color: var(--color-text);
+    box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+.nav-link-button--outline i { color: var(--color-primary); transition: color 0.3s ease; }
+.nav-link-button--outline:hover i { color: var(--color-white); }
+.nav-link-button--outline:hover { background-color: var(--color-primary); }
 
 /* Footer */
 footer {
@@ -87,8 +102,26 @@ footer {
     border-top: 1px solid rgba(0,0,0,0.05);
     margin-top: 40px;
 }
+.footer-contact {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 28px;
+}
+.footer-contact a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+.footer-contact a:hover { color: var(--color-primary); }
+.footer-contact i { color: var(--color-primary); font-size: 0.85em; margin-right: 4px; }
 .footer-links {
     margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 6px;
 }
 .footer-links a {
     color: #555;
@@ -119,7 +152,7 @@ footer {
 .logo {
     position: absolute;
     top: 0px;
-    left: -116px;
+    left: 20px;
     z-index: 10;
 }
 
@@ -137,13 +170,16 @@ footer {
 }
 
 .main-nav {
-    margin-left: 363px;
+    margin-left: auto;
 }
 
 footer .logo .logo-svg {
     height: 40px;
     margin: 0 auto;
 }
+
+/* Lag absolut positioniert als Fleck hinter der Kopfzeile, auf den meisten Seiten fehlt es ohnehin. */
+footer .logo { display: none; }
 
 /* Product Font Style */
 .dropdown-link-item p, .slider-title-btn > span:first-child,
@@ -166,20 +202,6 @@ footer .logo .logo-svg {
   white-space: nowrap;
 }
 
-@media (max-width: 1500px) {
-
-  .logo {
-      left: -60px;
-  }
-}
-
-@media (max-width: 1405px) {
-
-  .logo {
-      left: 0px;
-  }
-}
-
 @media (max-width: 1405px) {
 
   .logo-product-page {
@@ -187,10 +209,9 @@ footer .logo .logo-svg {
   }
 }
 
-@media (max-width: 1280px) {
-
-  .logo {
-      left: 20px;
+@media (max-width: 1240px) and (min-width: 769px) {
+  .logo .logo-svg {
+      height: 100px;
   }
 }
 
@@ -218,5 +239,18 @@ footer .logo .logo-svg {
 @media (max-width: 400px) {
   .logo, .logo-svg, .logo-product-page, .logo-product-page-svg {
       height:75px !important;
+  }
+}
+
+@media (max-width: 340px) {
+  .logo, .logo-svg, .logo-product-page, .logo-product-page-svg {
+      height:64px !important;
+  }
+}
+
+/* Größere Tippflächen im Footer */
+@media (max-width: 1240px) {
+  .footer-contact a, .footer-links a {
+      padding: 6px 0;
   }
 }

@@ -9,6 +9,8 @@
 
 > **Vertraulich – nicht veröffentlichen.** Dieser Bericht beschreibt ausnutzbare Schwachstellen. Der Ordner `docs/` (und `CLAUDE.md`, `.DS_Store`) darf **nicht** auf den Webserver hochgeladen werden. Siehe [S-18](#s-18-interne-dateien-würden-mit-ausgeliefert).
 
+> **Nachtrag 08.11.2026:** S-01, S-03 und S-11 sind in `anfrage.php` behoben (Adressprüfung, Honeypot, Mindest-Ausfülldauer, Limit je IP, Größen-, Typ-, Content-Type- und Herkunftsprüfung, `display_errors` aus). Geprüft mit einer Testkopie ohne echten Mailversand. PHPMailer mit SMTP (zweite Empfehlung zu S-01) ist nicht umgesetzt, dafür wären Postfach-Zugangsdaten nötig. Das Limit speichert gehashte IP-Adressen im Temp-Ordner des Servers, das gehört in die Datenschutzerklärung (S-14).
+
 ---
 
 ## 1. Zusammenfassung

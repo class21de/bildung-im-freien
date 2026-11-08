@@ -172,10 +172,12 @@ h1.product-name, .product-page-heading h1 {
 /* Variants & Accessories */
 .variants-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: 20px;
 }
 .variant-card {
+    min-width: 0;
+    overflow-x: auto; /* Breite Maßtabellen scrollen in der Karte. */
     border: 1px solid #e0e0e0;
     border-radius: var(--border-radius);
     padding: 10px;
@@ -224,11 +226,15 @@ h1.product-name, .product-page-heading h1 {
     align-items: flex-start;
     gap: 20px;
 }
+.accessory-item > div {
+    min-width: 0;
+}
 
 .accessory-item div h3{
   font: var(--font-heading);
 }
 .accessory-item img {
+    max-width: 100%;
     width: 150px;
     height: 150px;
     object-fit: contain;
@@ -334,7 +340,7 @@ h1.product-name, .product-page-heading h1 {
     overflow: hidden;
     box-shadow: var(--shadow-subtle);
     cursor: pointer;
-    border: 2px solid #383E42;
+    border: var(--border-image);
 }
 .collage-image-wrapper img {
     width: 100%;
@@ -385,14 +391,14 @@ h1.product-name, .product-page-heading h1 {
 /* Layout Grids */
 .top-row-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: start;
     gap: 50px;
     margin-bottom: 25px;
 }
 .bottom-row-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: stretch;
     gap: 50px;
 }
@@ -603,7 +609,7 @@ canvas {
 /* --- Responsive adjustments for product page --- */
 @media (max-width: 1200px) {
     .top-row-grid, .bottom-row-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 40px;
         align-items: start;
     }
@@ -644,6 +650,25 @@ canvas {
     }
     .configurator-intro{
       margin-top: -30px;
+    }
+}
+
+@media (hover: none) {
+    #save-screenshot-btn {
+        padding: 9px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accessory-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-details p, .accessory-item div p, .wood-info-item p {
+        text-align: left;
     }
 }
 /*
@@ -804,3 +829,12 @@ canvas {
   END: NEW ACCORDION EXPANSION STYLES
 ==========================================================================
 */
+
+/* Handy quer: Der Konfigurator darf nicht höher als der Bildschirm sein,
+   sonst lässt sich die Seite auf ihm nicht mehr weiterscrollen. */
+@media (max-height: 500px) and (max-width: 1200px) {
+    #configurator-container {
+        min-height: 0;
+        height: 75vh;
+    }
+}

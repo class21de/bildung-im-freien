@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referenzen - Miteinander im Freien</title>
+  <link rel="icon" href="/bilder/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/referenzen.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="/" class="logo"><img src="/bilder/logo.svg" alt="Martin Brauns - Wir richten Bildung ein Logo" class="logo-svg"></a>
+        <div class="header-contact">
+                <a href="tel:+495502999950" aria-label="Anrufen: 05502 – 99 99 50"><i class="fas fa-phone-alt"></i><span>05502 – 99 99 50</span></a>
+                <a href="mailto:info@bildung-einrichten.de" aria-label="E-Mail an info@bildung-einrichten.de"><i class="fas fa-envelope"></i><span>info@bildung-einrichten.de</span></a>
+            </div>
+
+            <nav class="main-nav" id="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item nav-item--has-dropdown">
+              <a href="#" class="nav-link button-74" id="mobile-products-trigger">Produkte <i class="fas fa-chevron-down fa-xs"></i></a>
+              <div class="dropdown" id="product-dropdown-container"></div>
+              <ul class="mobile-submenu-list">
+                <li><a href="#" class="mobile-submenu-category button-74" id="adults-products-trigger"><i class="fa fa-long-arrow-right"></i> Für Schulkinder &amp; Erwachsene</a></li>
+                <li><a href="#" class="mobile-submenu-category button-74" id="kids-products-trigger"><i class="fa fa-long-arrow-right"></i> Für Kindergärten</a></li>
+              </ul>
+            </li>
+            <li class="nav-item nav-item--references"><a href="/referenzen.html" class="nav-link">Referenzen</a></li>
+                    <li class="nav-item nav-item--about"><a href="/ueber-uns.html" class="nav-link">Über uns</a></li>
+            <li class="nav-item nav-item--has-pdf-dropdown">
+              <a href="#" class="nav-link">Broschüren <i class="fas fa-chevron-down fa-xs"></i></a>
+              <ul class="pdf-dropdown-menu">
+                <li><a href="/bildung-im-freien.pdf"><i class="fa-solid fa-download"></i> Bildung im Freien</a></li>
+                <li><a href="/miteinander-im-freien.pdf"><i class="fa-solid fa-download"></i> Miteinander im Freien</a></li>
+                <li><a href="/bambini-collection.pdf"><i class="fa-solid fa-download"></i> Bambini Collection</a></li>
+                <li><a href="/sonnenschirme.pdf"><i class="fa-solid fa-download"></i> Sonnenschirme</a></li>
+              </ul>
+            </li>
+                    <li class="nav-item nav-item--button nav-item--inquiry"><a href="/projektanfrage.html" class="nav-link-button nav-link-button--outline"><i class="fa-solid fa-clipboard-list"></i> Meine Projektanfrage <span class="wishlist-count" aria-label="Produkte in der Projektanfrage" hidden>0</span></a></li>
+                    <li class="nav-item nav-item--direct">
+                        <a href="tel:+495502999950"><i class="fas fa-phone-alt"></i> 05502 – 99 99 50</a>
+                        <a href="mailto:info@bildung-einrichten.de"><i class="fas fa-envelope"></i> info@bildung-einrichten.de</a>
+                    </li>
+          </ul>
+        </nav>
+        <div id="mobile-submenu-container"></div>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+      </div>
+    </header>
+    <main class="references-page">
+        <div class="container">
+            <h1>Referenzen</h1>
+            <div class="references-grid" id="references-grid"></div>
+            <div class="references-cta">
+                <a href="/projektanfrage.html" class="nav-link-button"><i class="fa-solid fa-clipboard-list"></i> Meine Projektanfrage</a>
+            </div>
+        </div>
+    </main>
+    <footer><div class="container"><a href="/" class="logo"><img src="/bilder/logo.svg" alt="Martin Brauns Logo" class="logo-svg"></a><div class="footer-contact"><a href="tel:+495502999950"><i class="fas fa-phone-alt"></i> 05502 – 99 99 50</a><a href="mailto:info@bildung-einrichten.de"><i class="fas fa-envelope"></i> info@bildung-einrichten.de</a></div>
+            <div class="footer-links"><a href="/kontakt.html">Kontakt &amp; Impressum</a><a href="/kontakt.html#datenschutz">Datenschutz</a></div><p class="copyright">&copy; 2025 Martin Brauns | Alle Rechte vorbehalten.</p></div></footer>
+
+    <div class="reference-modal" id="reference-modal" role="dialog" aria-modal="true" aria-label="Fotos des Projekts" hidden>
+        <button type="button" class="reference-modal-close" aria-label="Schließen"><i class="fas fa-times"></i></button>
+        <button type="button" class="reference-modal-nav reference-modal-prev" aria-label="Vorheriges Foto"><i class="fas fa-chevron-left"></i></button>
+        <figure>
+            <img id="reference-modal-image" alt="">
+            <figcaption id="reference-modal-caption"></figcaption>
+        </figure>
+        <button type="button" class="reference-modal-nav reference-modal-next" aria-label="Nächstes Foto"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+  <script src="/js/menu.js"></script>
+  <script src="/js/referenzen.js"></script>
+</body>
+</html>
